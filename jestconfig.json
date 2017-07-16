@@ -7,10 +7,10 @@
   ],
   "moduleDirectories": [
     "node_modules",
-    "src"
+    "src/js"
   ],
   "roots": [
-    "src"
+    "src/js"
   ],
   "moduleNameMapper": {
     "\\.(css|sass)$": "identity-obj-proxy",
