@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import uid from 'uid';
 
 import Card from 'components/Card';
+import style from './Board.sass';
 
 const Board = ({ cardsList }) => (
   <div>

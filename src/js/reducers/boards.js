@@ -2,22 +2,28 @@ import {
   CREATE_BOARD,
   UPDATE_BOARD,
   DELETE_BOARD
-} from 'constants';
+} from 'actionTypes';
 
 const boardsInitialState = [{
-  name: "To Do",
-  cards: [{
-    description: "I must do it",
-  }],
+  id: 1,
+  name: 'To do',
+}, {
+  id: 2,
+  name: 'In progress',
+}, {
+  id: 3,
+  name: 'Done',
 }];
 
 const boards = (state = boardsInitialState, action) => {
   switch(action.type) {
-    case CRAETE_BOARD:
+    case CREATE_BOARD:
       return state;
     case UPDATE_BOARD:
       return state;
     case DELETE_BOARD:
+      return state;
+    default:
       return state;
   }
 }

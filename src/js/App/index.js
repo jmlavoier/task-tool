@@ -1,16 +1,15 @@
 import React from 'react';
 import { createStore } from 'redux';
-import { Provider } from 'react-redux';
 
 import Container from 'components/Container';
 import reducers from 'reducers';
 
 const store = createStore(reducers);
 
+console.log(store.getState());
+
 const App = () => (
-  <Provider store={store}>
-    <Container />
-  </Provider>
+    <Container {...store.getState()}/>
 );
 
 export default App;
