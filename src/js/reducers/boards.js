@@ -2,7 +2,7 @@ import {
   CREATE_BOARD,
   UPDATE_BOARD,
   DELETE_BOARD
-} from 'actionTypes';
+} from 'constants';
 
 const boardsInitialState = [{
   id: 1,
@@ -18,7 +18,10 @@ const boardsInitialState = [{
 const boards = (state = boardsInitialState, action) => {
   switch(action.type) {
     case CREATE_BOARD:
-      return state;
+      return [
+        ...state,
+        action.board,
+      ];
     case UPDATE_BOARD:
       return state;
     case DELETE_BOARD:

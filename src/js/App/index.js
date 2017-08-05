@@ -1,4 +1,5 @@
 import React from 'react';
+import Provider from 'react-redux';
 import { createStore } from 'redux';
 
 import Container from 'components/Container';
@@ -6,10 +7,10 @@ import reducers from 'reducers';
 
 const store = createStore(reducers);
 
-console.log(store.getState());
-
 const App = () => (
-    <Container {...store.getState()}/>
+    <Provider store={store}>
+        <Container />
+    </Provider>
 );
 
 export default App;
