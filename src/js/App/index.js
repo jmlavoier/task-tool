@@ -1,16 +1,15 @@
 import React from 'react';
-import Provider from 'react-redux';
-import { createStore } from 'redux';
+import { connect } from 'react-redux';
 
 import Container from 'components/Container';
-import reducers from 'reducers';
 
-const store = createStore(reducers);
+const mapStateToProps = state => {
+    console.log(state);
+    return {
+        boards: state.boards,
+    }
+}
 
-const App = () => (
-    <Provider store={store}>
-        <Container />
-    </Provider>
-);
+const App = connect(mapStateToProps)(Container);
 
 export default App;
