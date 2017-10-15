@@ -2,12 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import uid from 'uid';
 
-import Card from 'containers/Cards/components/Card';
+import Card from 'containers/Cards';
 import style from './Board.sass';
 
 const Board = ({ name }) => (
-  <div>
-    {name}
+  <div className={style.board} >
+    <h4>{name}</h4>
+
   </div>
 );
 

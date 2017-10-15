@@ -2,7 +2,7 @@ import {
   CREATE_CARD,
   UPDATE_CARD,
   DELETE_CARD
-} from 'Cards.actionTypes.js';
+} from './Cards.actionTypes.js';
 
 const cardsInitialState = [{
   description: "I must do it",
