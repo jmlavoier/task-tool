@@ -2,13 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import uid from 'uid';
 
-import Card from 'components/Card';
+import Card from 'containers/Cards/components/Card';
 import style from './Board.sass';
 
-const Board = ({ cardsList }) => (
+const Board = ({ name }) => (
   <div>
-    {cardsList && cardsList
-      .map(item => <Card key={uid()} description={item.description} />)}
+    {name}
   </div>
 );
 

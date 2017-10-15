@@ -1,0 +1,16 @@
+<App> //Container
+    <Boards> //Container
+        <BoardList> //Presentational
+            <Board> //Presentational
+                
+                <Cards> //Container
+                    <CardsList> //Presentational
+                        <Card> //Presentational
+
+                        </Card>
+                    </CardsList>
+                </Cards>
+            </Board>
+        </BoardList>
+    </Boards>
+</App>
