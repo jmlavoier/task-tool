@@ -5,22 +5,26 @@ import {
 } from './Boards.actionTypes.js';
 
 const boardsInitialState = [{
-  id: 1,
+  id: 0,
   name: 'To do',
 }, {
-  id: 2,
+  id: 1,
   name: 'In progress',
 }, {
-  id: 3,
+  id: 2,
   name: 'Done',
 }];
 
 const boards = (state = boardsInitialState, action) => {
+  console.log(state);
   switch(action.type) {
     case CREATE_BOARD:
       return [
           ...state,
-          action.board,
+          {
+            id: state.length + 1,
+            name: "New Board",
+          },
       ];
     case UPDATE_BOARD:
       return state;

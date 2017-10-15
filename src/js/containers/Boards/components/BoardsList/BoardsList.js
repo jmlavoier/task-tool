@@ -2,13 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Board from 'containers/Boards/components/Board';
+import BtnAddBoard from 'containers/Boards/components/BtnAddBoard';
 
 import style from './BoardsList.sass';
 
-const BoardsList = ({ boards }) => {
+const BoardsList = ({ boards, onBtnAddBoardClick }) => {
   return (
     <div className={style['board-list']} >
-      {boards.map(({name}, i) => <Board key={i} onClick={e => {}} name={name} />)}
+      {boards.map(({ name, id }, i) => <Board key={i} name={name} id={id} />)}
+      <BtnAddBoard onClick={onBtnAddBoardClick} />
     </div>
   );
 };

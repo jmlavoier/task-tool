@@ -2,7 +2,7 @@ import {
   CREATE_CARD,
   UPDATE_CARD,
   DELETE_CARD
-} from './Cards.actionTypes.js';
+} from './Cards.actions';
 
 const cardsInitialState = [{
   description: "I must do it",
@@ -12,7 +12,13 @@ const cardsInitialState = [{
 const cards = (state = cardsInitialState, action) => {
   switch(action.type) {
     case CREATE_CARD:
-      return state;
+      return [
+        ...state,
+        {
+          description: "",
+          boardId: action.boardId,
+        }
+      ];
     case UPDATE_CARD:
       return state;
     case DELETE_CARD:
