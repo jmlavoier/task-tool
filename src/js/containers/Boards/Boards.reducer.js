@@ -29,9 +29,7 @@ const saveBoard = (state, board) => {
         : item
       );
   } else {
-    return [
-      ...state.filter(b => b.id !== board.id),
-    ]
+    return state.filter(b => b.id !== board.id);
   }
 }
 
@@ -43,7 +41,7 @@ const editBoard = (state, boardId) => {
     );
 }
 
-const boards = (state = boardsInitialState, action) => {
+const boards = (state = [], action) => {
   switch(action.type) {
     case CREATE_BOARD:
       return [
@@ -55,7 +53,7 @@ const boards = (state = boardsInitialState, action) => {
           },
       ];
     case SAVE_BOARD:
-      return saveBoard(state, {id: action.id, name: action.name})
+      return saveBoard(state, { id: action.id, name: action.name })
     case EDIT_BOARD:
       return editBoard(state, action.id);
     case DELETE_BOARD:

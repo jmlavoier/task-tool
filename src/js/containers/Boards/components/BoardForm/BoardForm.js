@@ -37,6 +37,18 @@ class BoardForm extends React.Component {
     }
   }
 
+  onFieldNameKeyup(event) {
+    const { keyCode } = event;
+    const { value } = event.target;
+    
+    if (keyCode === 13) {
+      this.props.onFieldNameBlur({ 
+        id: this.props.id,
+        name: value,
+      });
+    }
+  }
+
   onClickName() {
     this.props.onClickName(this.props.id);
   }
@@ -50,8 +62,10 @@ class BoardForm extends React.Component {
         {editMode ? <input type="text" 
                       ref={el => {this.inputName = el}} 
                       value={name} onChange={this.onChangeName.bind(this)} 
-                      onBlur={this.onFieldNameBlur.bind(this)} /> 
-                  : <h4 onClick={this.onClickName.bind(this)}>{name}</h4>}
+                      onBlur={this.onFieldNameBlur.bind(this)}
+                      onKeyUp={this.onFieldNameKeyup.bind(this)}
+                       /> 
+                  : <h4 onClick={this.onClickName.bind(this)}>{this.props.name}</h4>}
       </div>
     );
   }

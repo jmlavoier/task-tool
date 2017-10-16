@@ -6,12 +6,20 @@ import BtnAddCard from 'containers/Cards/components/BtnAddCard';
 
 import style from './CardsList.sass';
 
-const CardsList = ({ cards, boardId, onBtnAddCardClick }) => (
+const CardsList = ({ cards, boardId, onBtnAddCardClick, onSaveCard, onEditCard }) => {
+  return (
   <ul className={style['cards-list']}>
-    {cards.map(({ description }, i) => <Card key={i} description={description} />)}
+    {cards.map(({ id, description, editMode }, i) => <Card 
+      key={i} 
+      id={id}
+      description={description} 
+      onSaveCard={onSaveCard} 
+      onEditCard={onEditCard}
+      editMode={editMode} 
+    />)}
     <BtnAddCard onClick={() => onBtnAddCardClick(boardId)} />
   </ul>
-);
+)};
 
 CardsList.propTypes = {
   cards: PropTypes.array.isRequired,
