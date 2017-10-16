@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { createBoard } from './Boards.actions';
+import { createBoard, saveBoard, editBoard } from './Boards.actions';
 import BoardsList from './components/BoardsList';
 
 const mapStateToProps = state => ({
@@ -10,6 +10,8 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   onBtnAddBoardClick: () => dispatch(createBoard()),
+  onFieldNameBlur: board => dispatch(saveBoard(board)),
+  onClickName: boardId => dispatch(editBoard(boardId))
 })
 
 const Boards = connect(mapStateToProps, mapDispatchToProps)(BoardsList);
