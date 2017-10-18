@@ -1,4 +1,5 @@
 import uid from 'uid';
+import { boardId }  from 'containers/Boards/Boards.reducer';
 
 import {
   CREATE_CARD,
@@ -7,7 +8,12 @@ import {
   SAVE_CARD,
 } from './Cards.actions';
 
-const cardsInitialState = [];
+const cardsInitialState = [{
+  id: uid(),
+  description: 'I must do',
+  editMode: false,
+  boardId,
+}];
 
 const saveCard = (state, card) => {
   if (card.description !== '') {
