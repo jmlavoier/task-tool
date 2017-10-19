@@ -7,8 +7,10 @@ import {
   SAVE_BOARD,
 } from './Boards.actions';
 
+export const boardId = uid();
+
 const boardsInitialState = [{
-  id: uid(),
+  id: boardId,
   name: 'To do',
   editMode: false,
 }, {
@@ -41,7 +43,7 @@ const editBoard = (state, boardId) => {
     );
 }
 
-const boards = (state = [], action) => {
+const boards = (state = boardsInitialState, action) => {
   switch(action.type) {
     case CREATE_BOARD:
       return [

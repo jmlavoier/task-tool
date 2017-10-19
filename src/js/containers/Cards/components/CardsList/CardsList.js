@@ -6,7 +6,7 @@ import BtnAddCard from 'containers/Cards/components/BtnAddCard';
 
 import style from './CardsList.sass';
 
-const CardsList = ({ cards, boardId, onBtnAddCardClick, onSaveCard, onEditCard }) => {
+const CardsList = ({ cards, boardId, onBtnAddCardClick, onSaveCard, onEditCard, changeBoard }) => {
   return (
   <ul className={style['cards-list']}>
     {cards.map(({ id, description, editMode }, i) => <Card 
@@ -15,7 +15,8 @@ const CardsList = ({ cards, boardId, onBtnAddCardClick, onSaveCard, onEditCard }
       description={description} 
       onSaveCard={onSaveCard} 
       onEditCard={onEditCard}
-      editMode={editMode} 
+      editMode={editMode}
+      changeBoard={changeBoard}
     />)}
     <BtnAddCard onClick={() => onBtnAddCardClick(boardId)} />
   </ul>

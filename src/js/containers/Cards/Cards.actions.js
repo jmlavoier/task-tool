@@ -3,6 +3,7 @@ export const CREATE_CARD = 'CREATE_CARD';
 export const EDIT_CARD   = 'EDIT_CARD';
 export const DELETE_CARD = 'DELETE_CARD';
 export const SAVE_CARD   = 'SAVE_CARD';
+export const CHANGE_BOARD = 'CHANGE_BOARD';
 
 // Actions
 export const createCard = (boardId) => ({
@@ -25,3 +26,9 @@ export const saveCard = card => ({
   id: card.id,
   description: card.description,
 });
+
+export const changeBoard = (cardId, boardId) => ({
+  type: CHANGE_BOARD,
+  cardId,
+  boardId,
+})
