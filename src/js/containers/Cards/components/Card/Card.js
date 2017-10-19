@@ -6,16 +6,16 @@ import classNames from 'classnames';
 import CardForm from 'containers/Cards/components/CardForm';
 import style from './Card.sass';
 
-/**
- * Implements the drag source contract.
- */
 const cardSource = {
-  beginDrag(props) {
+  beginDrag(props, monitor, component) {
     return {
       id: props.id, 
     };
   },
   endDrag(props, monitor, component) {
+    if (!monitor.getDropResult()) {
+      return;
+    }
     const { boardId } = monitor.getDropResult();
     const { id, changeBoard } = props;
 
@@ -23,9 +23,6 @@ const cardSource = {
   }
 };
 
-/**
- * Specifies the props to inject into your component.
- */
 function collect(connect, monitor) {
   return {
     connectDragSource: connect.dragSource(),
