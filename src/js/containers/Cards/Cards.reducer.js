@@ -6,6 +6,7 @@ import {
   EDIT_CARD,
   DELETE_CARD,
   SAVE_CARD,
+  CHANGE_BOARD,
 } from './Cards.actions';
 
 const cardsInitialState = [{
@@ -43,8 +44,8 @@ const cards = (state = cardsInitialState, action) => {
       return saveCard(state, { id: action.id, description: action.description });
     case EDIT_CARD:
       return state.map(item => (item.id === action.id) ? { ...item, editMode: true } : item);
-    case DELETE_CARD:
-      return state;
+    case CHANGE_BOARD:
+      return state.map(item => (item.id === action.cardId) ? { ...item, boardId: action.boardId } : item);
     default:
       return state;
   }

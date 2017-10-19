@@ -11,18 +11,15 @@ import style from './Card.sass';
  */
 const cardSource = {
   beginDrag(props) {
-    console.log(props);
     return {
       id: props.id, 
     };
   },
-
   endDrag(props, monitor, component) {
-    if (!monitor.didDrop()) {
-      return;
-    }
+    const { boardId } = monitor.getDropResult();
+    const { id, changeBoard } = props;
 
-    console.log(props, monitor, component);
+    changeBoard(id, boardId);
   }
 };
 
@@ -41,7 +38,7 @@ const getClassNames = (isDragging) => classNames({
   [style['is-dragging']]: isDragging,
 });
 
-const Card = ({ id, description, editMode, onSaveCard, onEditCard, isDragging, connectDragSource }) => {
+const Card = ({ id, description, editMode, onSaveCard, onEditCard, isDragging, connectDragSource, changeBoard }) => {
   return connectDragSource(
     <div className={getClassNames(isDragging)} onClick={() => onEditCard(id)}  >
       {editMode 
