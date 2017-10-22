@@ -1,12 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createStore } from 'redux';
+import { compose, createStore } from 'redux';
 import { Provider } from 'react-redux';
+import { persistStore, autoRehydrate } from 'redux-persist';
 
 import reducers from 'reducers';
 import App from 'App';
 
-let store = createStore(reducers);
+let store = createStore(
+  reducers,
+  undefined,
+  compose(
+    autoRehydrate()
+  )
+);
+
+persistStore(store);
 
 ReactDOM.render(
   <Provider store={store}>
