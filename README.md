@@ -25,7 +25,8 @@ The **TaskTool** is more than a *To-do List*, It's a manager built thinking in p
 - [x] Modules
 - [x] TDD
 - [x] Redux State Management
-- [ ] DnD 
+- [x] DnD 
+- [x] Redux Persist
 
 ## Project
 
