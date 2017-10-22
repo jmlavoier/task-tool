@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Board from 'containers/Boards/components/Board';
-import BtnAddBoard from 'containers/Boards/components/BtnAddBoard';
+import Board from 'modules/Boards/components/Board';
+import BtnAddBoard from 'modules/Boards/components/BtnAddBoard';
 
 import style from './BoardsList.sass';
 
