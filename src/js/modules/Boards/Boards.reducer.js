@@ -25,37 +25,34 @@ const boardsInitialState = [{
 
 const saveBoard = (state, board) => {
   if (board.name !== '') {
-    return state.map(item => 
-      (item.id === board.id) 
-        ? { ...item, name: board.name, editMode: false } 
-        : item
+    return state.map(item =>
+      (item.id === board.id)
+        ? { ...item, name: board.name, editMode: false }
+        : item,
       );
-  } else {
-    return state.filter(b => b.id !== board.id);
   }
-}
+  return state.filter(b => b.id !== board.id);
+};
 
-const editBoard = (state, boardId) => {
-  return state.map(item => 
-    (item.id === boardId) 
-      ? { ...item, editMode: true } 
-      : { ...item, editMode: false } 
+const editBoard = (state, boardId) => state.map(item =>
+    (item.id === boardId)
+      ? { ...item, editMode: true }
+      : { ...item, editMode: false },
     );
-}
 
 const boards = (state = boardsInitialState, action) => {
-  switch(action.type) {
+  switch (action.type) {
     case CREATE_BOARD:
       return [
-          ...state,
-          {
-            id: uid(),
-            name: '',
-            editMode: true,
-          },
+        ...state,
+        {
+          id: uid(),
+          name: '',
+          editMode: true,
+        },
       ];
     case SAVE_BOARD:
-      return saveBoard(state, { id: action.id, name: action.name })
+      return saveBoard(state, { id: action.id, name: action.name });
     case EDIT_BOARD:
       return editBoard(state, action.id);
     case DELETE_BOARD:
@@ -63,6 +60,6 @@ const boards = (state = boardsInitialState, action) => {
     default:
       return state;
   }
-}
+};
 
 export default boards;

@@ -9,10 +9,10 @@ export const createBoard = () => ({
 
 export const deleteBoard = board => ({
   type: DELETE_BOARD,
-  boardId: board.id
+  boardId: board.id,
 });
 
-export const saveBoard = board => ({ 
+export const saveBoard = board => ({
   type: SAVE_BOARD,
   id: board.id,
   name: board.name,

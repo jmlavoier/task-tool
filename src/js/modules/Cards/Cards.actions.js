@@ -1,14 +1,14 @@
 // Types
 export const CREATE_CARD = 'CREATE_CARD';
-export const EDIT_CARD   = 'EDIT_CARD';
+export const EDIT_CARD = 'EDIT_CARD';
 export const DELETE_CARD = 'DELETE_CARD';
-export const SAVE_CARD   = 'SAVE_CARD';
+export const SAVE_CARD = 'SAVE_CARD';
 export const CHANGE_BOARD = 'CHANGE_BOARD';
 
 // Actions
-export const createCard = (boardId) => ({
+export const createCard = boardId => ({
   type: CREATE_CARD,
-  boardId
+  boardId,
 });
 
 export const editCard = cardId => ({
@@ -18,7 +18,7 @@ export const editCard = cardId => ({
 
 export const deleteCard = card => ({
   type: DELETE_CARD,
-  cardId: card.id
+  cardId: card.id,
 });
 
 export const saveCard = card => ({
@@ -31,4 +31,4 @@ export const changeBoard = (cardId, boardId) => ({
   type: CHANGE_BOARD,
   cardId,
   boardId,
-})
+});

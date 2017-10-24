@@ -6,13 +6,13 @@ import BoardsList from './components/BoardsList';
 
 const mapStateToProps = state => ({
   boards: state.boards,
-})
+});
 
 const mapDispatchToProps = dispatch => ({
   onBtnAddBoardClick: () => dispatch(createBoard()),
   onFieldNameBlur: board => dispatch(saveBoard(board)),
-  onClickName: boardId => dispatch(editBoard(boardId))
-})
+  onClickName: boardId => dispatch(editBoard(boardId)),
+});
 
 const Boards = connect(mapStateToProps, mapDispatchToProps)(BoardsList);
 

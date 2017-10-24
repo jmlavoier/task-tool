@@ -5,21 +5,17 @@ import CardsList from './components/CardsList';
 
 const filterCards = (cards, boardId) => cards.filter(card => card.boardId == boardId);
 
-const mapStateToProps = ({ cards }, { boardId }) => {
-  return {
-    cards: filterCards(cards, boardId),
-    boardId,
-  }
-}
+const mapStateToProps = ({ cards }, { boardId }) => ({
+  cards: filterCards(cards, boardId),
+  boardId,
+});
 
-const mapDispatchToProps = dispatch => {
-  return {
-    onBtnAddCardClick: boardId => dispatch(createCard(boardId)),
-    onSaveCard: card => dispatch(saveCard(card)),
-    onEditCard: cardId => dispatch(editCard(cardId)),
-    changeBoard: (cardId, boardId) => dispatch(changeBoard(cardId, boardId))
-  }
-}
+const mapDispatchToProps = dispatch => ({
+  onBtnAddCardClick: boardId => dispatch(createCard(boardId)),
+  onSaveCard: card => dispatch(saveCard(card)),
+  onEditCard: cardId => dispatch(editCard(cardId)),
+  changeBoard: (cardId, boardId) => dispatch(changeBoard(cardId, boardId)),
+});
 
 const Cards = connect(mapStateToProps, mapDispatchToProps)(CardsList);
 

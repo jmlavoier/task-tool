@@ -10,7 +10,7 @@ const App = () => (
   <div className={style.app} >
     <h1 className={style.title}>Task Tool</h1>
     <Boards />
-  </div> 
+  </div>
 );
 
 export default DragDropContext(HTML5Backend)(App);

@@ -9,7 +9,7 @@ import style from './Card.sass';
 const cardSource = {
   beginDrag(props, monitor, component) {
     return {
-      id: props.id, 
+      id: props.id,
     };
   },
   endDrag(props, monitor, component) {
@@ -20,30 +20,28 @@ const cardSource = {
     const { id, changeBoard } = props;
 
     changeBoard(id, boardId);
-  }
+  },
 };
 
 function collect(connect, monitor) {
   return {
     connectDragSource: connect.dragSource(),
-    isDragging: monitor.isDragging()
+    isDragging: monitor.isDragging(),
   };
 }
 
-const getClassNames = (isDragging) => classNames({
+const getClassNames = isDragging => classNames({
   [style.card]: true,
   [style['is-dragging']]: isDragging,
 });
 
-const Card = ({ id, description, editMode, onSaveCard, onEditCard, isDragging, connectDragSource, changeBoard }) => {
-  return connectDragSource(
-    <div className={getClassNames(isDragging)} onClick={() => onEditCard(id)}  >
-      {editMode 
+const Card = ({ id, description, editMode, onSaveCard, onEditCard, isDragging, connectDragSource, changeBoard }) => connectDragSource(
+  <div className={getClassNames(isDragging)} onClick={() => onEditCard(id)} >
+    {editMode
         ? <CardForm id={id} description={description} onSaveCard={onSaveCard} />
         : description}
-    </div>
+  </div>,
   );
-}
 
 Card.propTypes = {
   description: PropTypes.string.isRequired,

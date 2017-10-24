@@ -7,12 +7,12 @@ import { persistStore, autoRehydrate } from 'redux-persist';
 import reducers from 'reducers';
 import App from 'App';
 
-let store = createStore(
+const store = createStore(
   reducers,
   undefined,
   compose(
-    autoRehydrate()
-  )
+    autoRehydrate(),
+  ),
 );
 
 persistStore(store);
@@ -20,6 +20,6 @@ persistStore(store);
 ReactDOM.render(
   <Provider store={store}>
     <App />
-  </Provider>, 
-  document.getElementById('root')
+  </Provider>,
+  document.getElementById('root'),
 );

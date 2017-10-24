@@ -9,13 +9,13 @@ class CardForm extends React.Component {
 
     this.state = {
       description: this.props.description,
-    }
+    };
   }
 
   onDescriptionChange(event) {
     this.setState({
       description: event.target.value,
-    })
+    });
   }
 
   onDescriptionKeyDown(event) {
@@ -48,11 +48,11 @@ class CardForm extends React.Component {
 
   render() {
     return (
-      <textarea 
+      <textarea
         ref={el => this.el = el}
         className={style['card-form']}
-        value={this.state.description} 
-        onChange={this.onDescriptionChange.bind(this)} 
+        value={this.state.description}
+        onChange={this.onDescriptionChange.bind(this)}
         onKeyDown={this.onDescriptionKeyDown.bind(this)}
         onBlur={this.onDescriptionBlur.bind(this)}
       />

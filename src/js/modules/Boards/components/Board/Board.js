@@ -9,13 +9,13 @@ import Cards from 'modules/Cards';
 import style from './Board.sass';
 
 const boardSpec = {
-  drop: function(props) { 
+  drop(props) {
     return {
       boardId: props.id,
-    }
+    };
   },
 
-}
+};
 
 function collect(connect, monitor) {
   return {
@@ -24,24 +24,24 @@ function collect(connect, monitor) {
   };
 }
 
-const getClassNames = (isOver) => classNames({
+const getClassNames = isOver => classNames({
   [style.board]: true,
   [style['is-over']]: isOver,
-})
+});
 
-const Board = ({ 
-  name, 
-  id, 
-  editMode, 
-  onFieldNameBlur, 
-  onClickName, 
-  isOver, 
-  connectDropTarget 
+const Board = ({
+  name,
+  id,
+  editMode,
+  onFieldNameBlur,
+  onClickName,
+  isOver,
+  connectDropTarget,
 }) => connectDropTarget(
   <div className={getClassNames(isOver)} >
     <BoardForm editMode={editMode} id={id} name={name} onFieldNameBlur={onFieldNameBlur} onClickName={onClickName} />
     <Cards boardId={id} />
-  </div>
+  </div>,
 );
 
 Board.propTypes = {

@@ -7,19 +7,19 @@ class BoardForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: props.name
-    }
+      name: props.name,
+    };
   }
 
   onChangeName(event) {
     this.setState({
       name: event.target.value,
-    })
+    });
   }
 
   onFieldNameBlur(event) {
     const { value } = event.target;
-    this.props.onFieldNameBlur({ 
+    this.props.onFieldNameBlur({
       id: this.props.id,
       name: value,
     });
@@ -40,9 +40,9 @@ class BoardForm extends React.Component {
   onFieldNameKeyup(event) {
     const { keyCode } = event;
     const { value } = event.target;
-    
+
     if (keyCode === 13) {
-      this.props.onFieldNameBlur({ 
+      this.props.onFieldNameBlur({
         id: this.props.id,
         name: value,
       });
@@ -59,12 +59,14 @@ class BoardForm extends React.Component {
 
     return (
       <div className={style['board-form']} >
-        {editMode ? <input type="text" 
-                      ref={el => {this.inputName = el}} 
-                      value={name} onChange={this.onChangeName.bind(this)} 
-                      onBlur={this.onFieldNameBlur.bind(this)}
-                      onKeyUp={this.onFieldNameKeyup.bind(this)}
-                       /> 
+        {editMode ? <input
+          type="text"
+          ref={(el) => { this.inputName = el; }}
+          value={name}
+          onChange={this.onChangeName.bind(this)}
+          onBlur={this.onFieldNameBlur.bind(this)}
+          onKeyUp={this.onFieldNameKeyup.bind(this)}
+        />
                   : <h4 onClick={this.onClickName.bind(this)}>{this.props.name}</h4>}
       </div>
     );
