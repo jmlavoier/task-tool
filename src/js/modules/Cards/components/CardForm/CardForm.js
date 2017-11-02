@@ -10,6 +10,22 @@ class CardForm extends React.Component {
     this.state = {
       description: this.props.description,
     };
+
+    this.onDescriptionChange = this.onDescriptionChange.bind(this);
+    this.onDescriptionKeyDown = this.onDescriptionKeyDown.bind(this);
+    this.onDescriptionBlur = this.onDescriptionBlur.bind(this);
+  }
+
+  componentDidMount() {
+    if (this.el) {
+      this.el.focus();
+    }
+  }
+
+  componentDidUpdate() {
+    if (this.el) {
+      this.el.focus();
+    }
   }
 
   onDescriptionChange(event) {
@@ -34,30 +50,24 @@ class CardForm extends React.Component {
     });
   }
 
-  componentDidMount() {
-    if (this.el) {
-      this.el.focus();
-    }
-  }
-
-  componentDidUpdate() {
-    if (this.el) {
-      this.el.focus();
-    }
-  }
-
   render() {
     return (
       <textarea
-        ref={el => this.el = el}
+        ref={(el) => { this.el = el; }}
         className={style['card-form']}
         value={this.state.description}
-        onChange={this.onDescriptionChange.bind(this)}
-        onKeyDown={this.onDescriptionKeyDown.bind(this)}
-        onBlur={this.onDescriptionBlur.bind(this)}
+        onChange={this.onDescriptionChange}
+        onKeyDown={this.onDescriptionKeyDown}
+        onBlur={this.onDescriptionBlur}
       />
     );
   }
 }
+
+CardForm.propTypes = {
+  id: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  onSaveCard: PropTypes.func.isRequired,
+};
 
 export default CardForm;

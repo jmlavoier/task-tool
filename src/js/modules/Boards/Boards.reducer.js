@@ -7,10 +7,10 @@ import {
   SAVE_BOARD,
 } from './Boards.actions';
 
-export const boardId = uid();
+export const initialBoardId = uid();
 
 const boardsInitialState = [{
-  id: boardId,
+  id: initialBoardId,
   name: 'To do',
   editMode: false,
 }, {
@@ -24,21 +24,23 @@ const boardsInitialState = [{
 }];
 
 const saveBoard = (state, board) => {
-  if (board.name !== '') {
-    return state.map(item =>
-      (item.id === board.id)
-        ? { ...item, name: board.name, editMode: false }
-        : item,
-      );
+  if (board.name === '') {
+    return state.filter(item => item.id !== board.id);
   }
-  return state.filter(b => b.id !== board.id);
+  return state.map((item) => {
+    if (item.id === board.id) {
+      return { ...item, name: board.name, editMode: false };
+    }
+    return item;
+  });
 };
 
-const editBoard = (state, boardId) => state.map(item =>
-    (item.id === boardId)
-      ? { ...item, editMode: true }
-      : { ...item, editMode: false },
-    );
+const editBoard = (state, boardId) => state.map((item) => {
+  if (item.id === boardId) {
+    return { ...item, editMode: true };
+  }
+  return { ...item, editMode: false };
+});
 
 const boards = (state = boardsInitialState, action) => {
   switch (action.type) {

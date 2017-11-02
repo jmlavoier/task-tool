@@ -9,20 +9,11 @@ class BoardForm extends React.Component {
     this.state = {
       name: props.name,
     };
-  }
 
-  onChangeName(event) {
-    this.setState({
-      name: event.target.value,
-    });
-  }
-
-  onFieldNameBlur(event) {
-    const { value } = event.target;
-    this.props.onFieldNameBlur({
-      id: this.props.id,
-      name: value,
-    });
+    this.onChangeName = this.onChangeName.bind(this);
+    this.onFieldNameBlur = this.onFieldNameBlur.bind(this);
+    this.onFieldNameKeyup = this.onFieldNameKeyup.bind(this);
+    this.onClickName = this.onClickName.bind(this);
   }
 
   componentDidMount() {
@@ -35,6 +26,20 @@ class BoardForm extends React.Component {
     if (this.inputName) {
       this.inputName.focus();
     }
+  }
+
+  onFieldNameBlur(event) {
+    const { value } = event.target;
+    this.props.onFieldNameBlur({
+      id: this.props.id,
+      name: value,
+    });
+  }
+
+  onChangeName(event) {
+    this.setState({
+      name: event.target.value,
+    });
   }
 
   onFieldNameKeyup(event) {
@@ -55,7 +60,7 @@ class BoardForm extends React.Component {
 
   render() {
     const { name } = this.state;
-    const { editMode, onFieldNameBlur } = this.props;
+    const { editMode } = this.props;
 
     return (
       <div className={style['board-form']} >
@@ -63,17 +68,18 @@ class BoardForm extends React.Component {
           type="text"
           ref={(el) => { this.inputName = el; }}
           value={name}
-          onChange={this.onChangeName.bind(this)}
-          onBlur={this.onFieldNameBlur.bind(this)}
-          onKeyUp={this.onFieldNameKeyup.bind(this)}
-        />
-                  : <h4 onClick={this.onClickName.bind(this)}>{this.props.name}</h4>}
+          onChange={this.onChangeName}
+          onBlur={this.onFieldNameBlur}
+          onKeyUp={this.onFieldNameKeyup}
+        /> : <h4><button type="button" onClick={this.onClickName}>{this.props.name}</button></h4>
+        }
       </div>
     );
   }
 }
 
 BoardForm.propTypes = {
+  id: PropTypes.string.isRequired,
   name: PropTypes.string,
   editMode: PropTypes.bool,
   onFieldNameBlur: PropTypes.func,

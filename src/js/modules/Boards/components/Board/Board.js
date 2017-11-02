@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import uid from 'uid';
 import { DropTarget } from 'react-dnd';
 import classNames from 'classnames';
 
@@ -39,7 +38,13 @@ const Board = ({
   connectDropTarget,
 }) => connectDropTarget(
   <div className={getClassNames(isOver)} >
-    <BoardForm editMode={editMode} id={id} name={name} onFieldNameBlur={onFieldNameBlur} onClickName={onClickName} />
+    <BoardForm
+      editMode={editMode}
+      id={id}
+      name={name}
+      onFieldNameBlur={onFieldNameBlur}
+      onClickName={onClickName}
+    />
     <Cards boardId={id} />
   </div>,
 );

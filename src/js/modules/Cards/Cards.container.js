@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { createCard, saveCard, editCard, changeBoard } from './Cards.actions';
 import CardsList from './components/CardsList';
 
-const filterCards = (cards, boardId) => cards.filter(card => card.boardId == boardId);
+const filterCards = (cards, boardId) => cards.filter(card => card.boardId === boardId);
 
 const mapStateToProps = ({ cards }, { boardId }) => ({
   cards: filterCards(cards, boardId),

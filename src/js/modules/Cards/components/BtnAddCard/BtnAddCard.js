@@ -8,7 +8,7 @@ const BtnAddCard = ({ onClick }) => (
 );
 
 BtnAddCard.propTypes = {
-  onClick: PropTypes.func,
+  onClick: PropTypes.func.isRequired,
 };
 
 export default BtnAddCard;

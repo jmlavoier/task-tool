@@ -7,12 +7,12 @@ import CardForm from 'modules/Cards/components/CardForm';
 import style from './Card.sass';
 
 const cardSource = {
-  beginDrag(props, monitor, component) {
+  beginDrag(props) {
     return {
       id: props.id,
     };
   },
-  endDrag(props, monitor, component) {
+  endDrag(props, monitor) {
     if (!monitor.getDropResult()) {
       return;
     }
@@ -35,18 +35,19 @@ const getClassNames = isDragging => classNames({
   [style['is-dragging']]: isDragging,
 });
 
-const Card = ({ id, description, editMode, onSaveCard, onEditCard, isDragging, connectDragSource, changeBoard }) => connectDragSource(
-  <div className={getClassNames(isDragging)} onClick={() => onEditCard(id)} >
+const Card = ({ id, description, editMode, onSaveCard, onEditCard, isDragging, connectDragSource }) => connectDragSource(
+  <div role="presentation" className={getClassNames(isDragging)} onClick={() => onEditCard(id)} >
     {editMode
         ? <CardForm id={id} description={description} onSaveCard={onSaveCard} />
         : description}
   </div>,
-  );
+);
 
 Card.propTypes = {
   description: PropTypes.string.isRequired,
   isDragging: PropTypes.bool.isRequired,
   connectDragSource: PropTypes.func.isRequired,
+  changeBoard: PropTypes.func.isRequired,
 };
 
 export default DragSource('CARD', cardSource, collect)(Card);
