@@ -12,7 +12,8 @@
     "lint": "esw src/** -w",
     "lint:fix": "eslint src/** --fix",
     "test": "jest --config jestconfig.json",
-    "test:watch": "jest --config jestconfig.json --watch"
+    "test:watch": "jest --config jestconfig.json --watch",
+    "test:cov": "jest --config jestconfig.json --coverage"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",
@@ -36,6 +37,7 @@
     "jest-enzyme": "^3.4.0",
     "node-sass": "^4.5.3",
     "react-addons-test-utils": "^15.6.0",
+    "react-dnd-test-backend": "^2.5.4",
     "react-test-renderer": "^15.6.1",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",

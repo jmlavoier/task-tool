@@ -1,17 +1,22 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import TestBackend from 'react-dnd-test-backend';
+import { DragDropContext } from 'react-dnd';
+import { shallow, mount } from 'enzyme';
+import uid from 'uid';
 
 import Board from './Board';
 
-const mockCardsList = [
-  { description: 'Task 1' },
-  { description: 'Task 2' },
-];
+function wrapInTestContext(DecoratedComponent) {
+  return DragDropContext(TestBackend)(props => <DecoratedComponent {...props} />);
+}
 
 test('Should component render with props', () => {
-  const wrapper = shallow(<Board cardsList={mockCardsList} />);
+  const OriginalBox = wrapInTestContext(Board);
+  const identity = el => el;
+  const propName = 'To do';
+  const propId = uid();
+  const wrapper = shallow(<OriginalBox id={propId} name={propName} connectDragSource={identity} />);
 
-  expect(wrapper.children()).toHaveLength(2);
-  expect(wrapper.childAt(0).prop('description')).toBe(mockCardsList[0].description);
-  expect(wrapper.childAt(1).prop('description')).toBe(mockCardsList[1].description);
+  expect(wrapper.prop('id')).toBe(propId);
+  expect(wrapper.prop('name')).toBe(propName);
 });
