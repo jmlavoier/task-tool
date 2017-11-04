@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1509821498077" clover="3.2.0">
-  <project timestamp="1509821498077" name="All files">
-    <metrics statements="128" coveredstatements="45" conditionals="44" coveredconditionals="0" methods="59" coveredmethods="0" elements="231" coveredelements="45" complexity="0" loc="128" ncloc="128" packages="8" files="17" classes="17">
+<coverage generated="1509831025845" clover="3.2.0">
+  <project timestamp="1509831025846" name="All files">
+    <metrics statements="125" coveredstatements="45" conditionals="44" coveredconditionals="0" methods="58" coveredmethods="1" elements="227" coveredelements="46" complexity="0" loc="125" ncloc="125" packages="8" files="17" classes="17">
       <package name="Boards">
         <metrics statements="28" coveredstatements="13" conditionals="12" coveredconditionals="0" methods="10" coveredmethods="0"/>
         <file name="Boards.actions.js" path="/Users/joao/Sites/task-tool/src/js/modules/Boards/Boards.actions.js">
@@ -40,16 +40,13 @@
         </file>
       </package>
       <package name="Boards.components.Board">
-        <metrics statements="7" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
         <file name="Board.js" path="/Users/joao/Sites/task-tool/src/js/modules/Boards/components/Board/Board.js">
-          <metrics statements="7" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
-          <line num="10" count="1" type="stmt"/>
-          <line num="12" count="0" type="stmt"/>
-          <line num="20" count="0" type="stmt"/>
-          <line num="26" count="1" type="stmt"/>
-          <line num="31" count="1" type="stmt"/>
-          <line num="39" count="0" type="stmt"/>
-          <line num="52" count="1" type="stmt"/>
+          <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+          <line num="28" count="3" type="stmt"/>
+          <line num="33" count="1" type="stmt"/>
+          <line num="46" count="1" type="stmt"/>
+          <line num="56" count="1" type="stmt"/>
         </file>
       </package>
       <package name="Boards.components.BoardForm">

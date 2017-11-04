@@ -8,6 +8,7 @@ import BoardForm from 'modules/Boards/components/BoardForm';
 import Cards from 'modules/Cards';
 import style from './Board.sass';
 
+/* istanbul ignore next */
 const boardSpec = {
   drop(props) {
     return {
@@ -16,6 +17,7 @@ const boardSpec = {
   },
 };
 
+/* istanbul ignore next */
 function collect(connect, monitor) {
   return {
     connectDropTarget: connect.dropTarget(),
@@ -28,7 +30,7 @@ export const getClassNames = isOver => classNames({
   [style['is-over']]: isOver,
 });
 
-const Board = ({ name, id, editMode, onFieldNameBlur, onClickName, isOver, connectDropTarget }) => connectDropTarget(
+export const Board = ({ name, id, editMode, onFieldNameBlur, onClickName, isOver, connectDropTarget }) => connectDropTarget(
   <div className={getClassNames(isOver)} >
     <BoardForm
       editMode={editMode}

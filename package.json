@@ -13,7 +13,8 @@
     "lint:fix": "eslint src/** --fix",
     "test": "jest --config jestconfig.json",
     "test:watch": "jest --config jestconfig.json --watch",
-    "test:cov": "jest --config jestconfig.json --coverage"
+    "test:cov": "jest --config jestconfig.json --coverage",
+    "server:cov": "http-server ./coverage"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",
@@ -32,6 +33,7 @@
     "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-react": "^7.1.0",
     "eslint-watch": "^3.1.2",
+    "http-server": "^0.10.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^20.0.4",
     "jest-enzyme": "^3.4.0",
