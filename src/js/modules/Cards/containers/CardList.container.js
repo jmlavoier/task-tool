@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 
-import { createCard, saveCard, editCard, changeBoard } from './Cards.actions';
-import CardsList from './components/CardsList';
+import { createCard, saveCard, editCard, changeBoard } from 'modules/Cards/actions/Cards.actions';
+import CardsList from 'modules/Cards/components/CardsList';
 
 const filterCards = (cards, boardId) => cards.filter(card => card.boardId === boardId);
 

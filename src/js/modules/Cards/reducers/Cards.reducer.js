@@ -1,12 +1,12 @@
 import uid from 'uid';
-import { boardId } from 'modules/Boards/Boards.reducer';
+import { boardId } from 'modules/Boards/reducers/Boards.reducer';
 
 import {
   CREATE_CARD,
   EDIT_CARD,
   SAVE_CARD,
   CHANGE_BOARD,
-} from './Cards.actions';
+} from 'modules/Cards/actions/Cards.actions';
 
 const cardsInitialState = [{
   id: uid(),

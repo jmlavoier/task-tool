@@ -1,2 +1,2 @@
-export { default } from './Cards.container';
-export { default as reducer } from './Cards.reducer.js';
+export { default } from 'modules/Cards/containers/CardList.container';
+export { default as reducer } from 'modules/Cards/reducers/Cards.reducer.js';

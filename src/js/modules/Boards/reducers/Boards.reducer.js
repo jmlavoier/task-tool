@@ -1,11 +1,10 @@
 import uid from 'uid';
-
 import {
   CREATE_BOARD,
   EDIT_BOARD,
   DELETE_BOARD,
   SAVE_BOARD,
-} from './Boards.actions';
+} from 'modules/Boards/actions/Boards.actions';
 
 export const initialBoardId = uid();
 
