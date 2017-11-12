@@ -44,10 +44,17 @@ const Card = ({ id, description, editMode, onSaveCard, onEditCard, isDragging, c
 );
 
 Card.propTypes = {
+  id: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
+  editMode: PropTypes.bool,
+  onSaveCard: PropTypes.func.isRequired,
+  onEditCard: PropTypes.func.isRequired,
   isDragging: PropTypes.bool.isRequired,
   connectDragSource: PropTypes.func.isRequired,
-  changeBoard: PropTypes.func.isRequired,
+};
+
+Card.defaultProps = {
+  editMode: false,
 };
 
 export default DragSource('CARD', cardSource, collect)(Card);

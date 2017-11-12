@@ -1,7 +1,9 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import uid from 'uid';
+import { shallow, mount } from 'enzyme';
 import TestBackend from 'react-dnd-test-backend';
 import { DragDropContext } from 'react-dnd';
+import CardForm from 'modules/Cards/components/CardForm';
 
 import Card from './Card';
 
@@ -12,10 +14,11 @@ function wrapInTestContext(DecoratedComponent) {
 test('Should component render with default props', () => {
   const OriginalBox = wrapInTestContext(Card);
   const identity = el => el;
+  const description = 'Testing anything';
 
-  const wrapper = shallow(<OriginalBox connectDragSource={identity} />);
+  const wrapper = mount(<OriginalBox connectDragSource={identity} id={uid()} onSaveCard={() => {}} onEditCard={() => {}} description={description} />);
   
-  expect(wrapper.text()).toBe('');
+  expect(wrapper.text()).toBe(description);
 });
 
 
@@ -24,7 +27,17 @@ test('Should component render with props', () => {
   const identity = el => el;
   const description = 'Go to somewhere';
   
-  const wrapper = shallow(<OriginalBox connectDragSource={identity} description={description} />);
+  const wrapper = mount(<OriginalBox connectDragSource={identity} id={uid()} onSaveCard={() => {}} onEditCard={() => {}} description={description} />);
 
   expect(wrapper.text()).toBe(description);
 });
+
+
+test('Should component render CardForm', () => {
+  const OriginalBox = wrapInTestContext(Card);
+  const identity = el => el;
+  
+  const wrapper = shallow(<OriginalBox connectDragSource={identity} id={uid()} editMode onSaveCard={() => {}} onEditCard={() => {}} description="" />);
+
+  expect(wrapper.find(CardForm)).toHaveLength(1);
+})
