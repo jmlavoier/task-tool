@@ -1,5 +1,5 @@
 import uid from 'uid';
-import { boardId } from 'modules/Boards/reducers/Boards.reducer';
+import { initialBoardId } from 'modules/Boards/reducers/Boards.reducer';
 
 import {
   CREATE_CARD,
@@ -8,14 +8,14 @@ import {
   CHANGE_BOARD,
 } from 'modules/Cards/actions/Cards.actions';
 
-const cardsInitialState = [{
+export const cardsInitialState = [{
   id: uid(),
   description: 'I must do',
   editMode: false,
-  boardId,
+  boardId: initialBoardId,
 }];
 
-const saveCard = (state, card) => {
+export const saveCard = (state, card) => {
   if (card.description !== '') {
     return state.map((item) => {
       if (item.id === card.id) {
@@ -33,7 +33,7 @@ const cards = (state = cardsInitialState, action) => {
       return [
         ...state,
         {
-          id: uid(),
+          id: action.id,
           description: '',
           boardId: action.boardId,
           editMode: true,

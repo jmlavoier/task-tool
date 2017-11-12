@@ -6,8 +6,9 @@ export const SAVE_CARD = 'SAVE_CARD';
 export const CHANGE_BOARD = 'CHANGE_BOARD';
 
 // Actions
-export const createCard = boardId => ({
+export const createCard = (id, boardId) => ({
   type: CREATE_CARD,
+  id,
   boardId,
 });
 

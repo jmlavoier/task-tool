@@ -1,5 +1,5 @@
+import uid from 'uid';
 import { connect } from 'react-redux';
-
 import { createCard, saveCard, editCard, changeBoard } from 'modules/Cards/actions/Cards.actions';
 import CardsList from 'modules/Cards/components/CardsList';
 
@@ -11,7 +11,7 @@ const mapStateToProps = ({ cards }, { boardId }) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  onBtnAddCardClick: boardId => dispatch(createCard(boardId)),
+  onBtnAddCardClick: boardId => dispatch(createCard(uid(), boardId)),
   onSaveCard: card => dispatch(saveCard(card)),
   onEditCard: cardId => dispatch(editCard(cardId)),
   changeBoard: (cardId, boardId) => dispatch(changeBoard(cardId, boardId)),

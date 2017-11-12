@@ -3,8 +3,9 @@ export const EDIT_BOARD = 'EDIT_BOARD';
 export const DELETE_BOARD = 'DELETE_BOARD';
 export const SAVE_BOARD = 'SAVE_BOARD';
 
-export const createBoard = () => ({
+export const createBoard = boardId => ({
   type: CREATE_BOARD,
+  id: boardId,
 });
 
 export const deleteBoard = board => ({

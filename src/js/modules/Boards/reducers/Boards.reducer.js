@@ -2,13 +2,12 @@ import uid from 'uid';
 import {
   CREATE_BOARD,
   EDIT_BOARD,
-  DELETE_BOARD,
   SAVE_BOARD,
 } from 'modules/Boards/actions/Boards.actions';
 
 export const initialBoardId = uid();
 
-const boardsInitialState = [{
+export const boardsInitialState = [{
   id: initialBoardId,
   name: 'To do',
   editMode: false,
@@ -22,7 +21,7 @@ const boardsInitialState = [{
   editMode: false,
 }];
 
-const saveBoard = (state, board) => {
+export const saveBoard = (state, board) => {
   if (board.name === '') {
     return state.filter(item => item.id !== board.id);
   }
@@ -34,7 +33,7 @@ const saveBoard = (state, board) => {
   });
 };
 
-const editBoard = (state, boardId) => state.map((item) => {
+export const editBoard = (state, boardId) => state.map((item) => {
   if (item.id === boardId) {
     return { ...item, editMode: true };
   }
@@ -47,7 +46,7 @@ const boards = (state = boardsInitialState, action) => {
       return [
         ...state,
         {
-          id: uid(),
+          id: action.id,
           name: '',
           editMode: true,
         },
@@ -56,8 +55,6 @@ const boards = (state = boardsInitialState, action) => {
       return saveBoard(state, { id: action.id, name: action.name });
     case EDIT_BOARD:
       return editBoard(state, action.id);
-    case DELETE_BOARD:
-      return state;
     default:
       return state;
   }

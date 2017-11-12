@@ -1,3 +1,4 @@
+import uid from 'uid';
 import { connect } from 'react-redux';
 
 import { createBoard, saveBoard, editBoard } from 'modules/Boards/actions/Boards.actions';
@@ -8,7 +9,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  onBtnAddBoardClick: () => dispatch(createBoard()),
+  onBtnAddBoardClick: () => dispatch(createBoard(uid())),
   onFieldNameBlur: board => dispatch(saveBoard(board)),
   onClickName: boardId => dispatch(editBoard(boardId)),
 });
