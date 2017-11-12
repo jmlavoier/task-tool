@@ -14,7 +14,8 @@
     "test": "jest --config jestconfig.json",
     "test:watch": "jest --config jestconfig.json --watch",
     "test:cov": "jest --config jestconfig.json --coverage",
-    "server:cov": "http-server ./coverage"
+    "server:cov": "http-server ./coverage",
+    "converall": "jscoverage lib && YOURPACKAGE_COVERAGE=1 nodeunit --reporter=lcov test | coveralls"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",
@@ -23,6 +24,7 @@
     "babel-preset-env": "^1.6.0",
     "babel-preset-es2016": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "coveralls": "^3.0.0",
     "css-loader": "^0.28.4",
     "enzyme": "^2.9.1",
     "eslint": "^3",
