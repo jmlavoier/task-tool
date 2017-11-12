@@ -13,7 +13,7 @@
     "lint:fix": "eslint src/** --fix",
     "test": "jest --config jestconfig.json",
     "test:watch": "jest --config jestconfig.json --watch",
-    "test:cov": "jest --config jestconfig.json --coverage",
+    "test:cov": "jest --config jestconfig.json --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "server:cov": "http-server ./coverage",
     "converall": "jscoverage lib && YOURPACKAGE_COVERAGE=1 nodeunit --reporter=lcov test | coveralls"
   },
