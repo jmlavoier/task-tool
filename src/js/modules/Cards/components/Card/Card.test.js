@@ -37,7 +37,7 @@ test('Should component render CardForm', () => {
   const OriginalBox = wrapInTestContext(Card);
   const identity = el => el;
   
-  const wrapper = shallow(<OriginalBox connectDragSource={identity} id={uid()} editMode onSaveCard={() => {}} onEditCard={() => {}} description="" />);
+  const wrapper = mount(<OriginalBox connectDragSource={identity} id={uid()} editMode onSaveCard={() => {}} onEditCard={() => {}} description="" />);
 
   expect(wrapper.find(CardForm)).toHaveLength(1);
 })
