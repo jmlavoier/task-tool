@@ -10,11 +10,13 @@ import {
 const board = { id: uid(), name: 'testing' };
 
 test('should create action to create board', () => {
+  const boardId = uid();
   const expectedAction = {
     type: CREATE_BOARD,
+    id: boardId,
   };
 
-  expect(createBoard(board)).toEqual(expectedAction);
+  expect(createBoard(boardId)).toEqual(expectedAction);
 
 });
 

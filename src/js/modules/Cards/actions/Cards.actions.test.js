@@ -6,12 +6,14 @@ const card = { id: uid(), description: 'test card' };
 
 test('should create action to create card', ()=> {
   const boardId = uid();
+  const cardId = uid();
   const expectedAction = {
     type: CREATE_CARD,
+    id: cardId,
     boardId,
   };
 
-  expect(createCard(boardId)).toEqual(expectedAction);
+  expect(createCard(cardId, boardId)).toEqual(expectedAction);
 });
 
 test('should create action to edit card', () => {
