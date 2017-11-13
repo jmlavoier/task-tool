@@ -2,35 +2,31 @@
 
 ![TaskTool](http://i.imgur.com/nt7WsKC.png)
 
-
 The **TaskTool** is more than a *To-do List*, It's a manager built thinking in performance, processing costs and scalability.
-*This project has been building in order to practice my knowledge in some technologies*
+*This project has been building in order to practice my knowledge in some technologies.*
 
-## Install
-
-## Start
-
-## Run tests
-
-## Environmet
-
-- React
-- Redux
-- Css Modules (Sass)
-- Unit tests
+### JavaScript 
+    - ES6+ (Babel)
+### UI Components
+    - React
+### State management 
+    - Redux
+    - React Redux
+    - Redux Persist
+### Usability 
+    - React DnD
+### Style
+    - Sass
+### Modules
+    - Webpack
+    - CSS Modules
+### Unit tests
     - Jest
     - Enzyme
-- Lint
-- Coverage
+### Clean code
+    - Lint
+### Continuous Integration
+    - Coveralls
 
-## Architecture (Paradigms & Concepts)
-
-- [x] Modules
-- [x] TDD
-- [x] Redux State Management
-- [x] DnD 
-- [x] Redux Persist
-
-## Project
-
+## Layout
 ![Project](http://i.imgur.com/luVT6BZ.png)
