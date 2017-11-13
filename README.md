@@ -5,15 +5,15 @@
 The **TaskTool** is more than a *To-do List*, It's a manager built thinking in performance, processing costs and scalability.
 *This project has been building in order to practice my knowledge in some technologies.*
 
-**JavaScript** - *ES6+ (Babel)*; 
-**UI Components** - *React*; 
-**State management** - *Redux - React Redux - Redux Persist*;
-**Usability** - *React DnD*;
-**Style** - *Sass*;
-**Modules** - *Webpack - CSS Modules*;
-**Unit tests** - *Jest - Enzyme*;
-**Clean code** - *Lint*;
-**Continuous Integration** - *Coveralls*;
+- **JavaScript** - *ES6+ (Babel)*; 
+- **UI Components** - *React*; 
+- **State management** - *Redux - React Redux - Redux Persist*;
+- **Usability** - *React DnD*;
+- **Style** - *Sass*;
+- **Modules** - *Webpack - CSS Modules*;
+- **Unit tests** - *Jest - Enzyme*;
+- **Clean code** - *Lint*;
+- **Continuous Integration** - *Coveralls*;
 
 ## Layout
 ![Project](http://i.imgur.com/luVT6BZ.png)
