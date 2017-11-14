@@ -729,7 +729,7 @@ module.exports = ReactDOMComponentTree;
 "use strict";
 
 
-module.exports = __webpack_require__(26);
+module.exports = __webpack_require__(27);
 
 
 /***/ }),
@@ -887,7 +887,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 
 
-var _prodInvariant = __webpack_require__(27);
+var _prodInvariant = __webpack_require__(28);
 
 var ReactCurrentOwner = __webpack_require__(14);
 
@@ -1351,8 +1351,8 @@ var _prodInvariant = __webpack_require__(3),
 var CallbackQueue = __webpack_require__(131);
 var PooledClass = __webpack_require__(21);
 var ReactFeatureFlags = __webpack_require__(136);
-var ReactReconciler = __webpack_require__(25);
-var Transaction = __webpack_require__(53);
+var ReactReconciler = __webpack_require__(26);
+var Transaction = __webpack_require__(54);
 
 var invariant = __webpack_require__(1);
 
@@ -2583,9 +2583,9 @@ module.exports = isArray;
 /* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseGetTag = __webpack_require__(43),
+var baseGetTag = __webpack_require__(44),
     getPrototype = __webpack_require__(271),
-    isObjectLike = __webpack_require__(30);
+    isObjectLike = __webpack_require__(31);
 
 /** `Object#toString` result references. */
 var objectTag = '[object Object]';
@@ -2787,7 +2787,7 @@ var _assign = __webpack_require__(4);
 var ReactCurrentOwner = __webpack_require__(14);
 
 var warning = __webpack_require__(2);
-var canDefineProperty = __webpack_require__(56);
+var canDefineProperty = __webpack_require__(57);
 var hasOwnProperty = Object.prototype.hasOwnProperty;
 
 var REACT_ELEMENT_TYPE = __webpack_require__(157);
@@ -3114,6 +3114,29 @@ module.exports = ReactElement;
 
 /***/ }),
 /* 23 */
+/***/ (function(module, exports) {
+
+/**
+ * Export `uid`
+ */
+
+module.exports = uid;
+
+/**
+ * Create a `uid`
+ *
+ * @param {String} len
+ * @return {String} uid
+ */
+
+function uid(len) {
+  len = len || 7;
+  return Math.random().toString(35).substr(2, len);
+}
+
+
+/***/ }),
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var identity = __webpack_require__(115),
@@ -3136,7 +3159,7 @@ module.exports = baseRest;
 
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3152,10 +3175,10 @@ module.exports = baseRest;
 
 
 
-var DOMNamespaces = __webpack_require__(74);
-var setInnerHTML = __webpack_require__(55);
+var DOMNamespaces = __webpack_require__(75);
+var setInnerHTML = __webpack_require__(56);
 
-var createMicrosoftUnsafeLocalFunction = __webpack_require__(81);
+var createMicrosoftUnsafeLocalFunction = __webpack_require__(82);
 var setTextContent = __webpack_require__(150);
 
 var ELEMENT_NODE_TYPE = 1;
@@ -3259,7 +3282,7 @@ DOMLazyTree.queueText = queueText;
 module.exports = DOMLazyTree;
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3431,7 +3454,7 @@ module.exports = ReactReconciler;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3464,8 +3487,8 @@ var createFactory = ReactElement.createFactory;
 var cloneElement = ReactElement.cloneElement;
 
 if (process.env.NODE_ENV !== 'production') {
-  var lowPriorityWarning = __webpack_require__(89);
-  var canDefineProperty = __webpack_require__(56);
+  var lowPriorityWarning = __webpack_require__(90);
+  var canDefineProperty = __webpack_require__(57);
   var ReactElementValidator = __webpack_require__(158);
   var didWarnPropTypesDeprecated = false;
   createElement = ReactElementValidator.createElement;
@@ -3569,7 +3592,7 @@ module.exports = React;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3613,7 +3636,7 @@ function reactProdInvariant(code) {
 module.exports = reactProdInvariant;
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var freeGlobal = __webpack_require__(112);
@@ -3628,7 +3651,7 @@ module.exports = root;
 
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, exports) {
 
 /**
@@ -3665,7 +3688,7 @@ module.exports = isObject;
 
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports) {
 
 /**
@@ -3700,7 +3723,7 @@ module.exports = isObjectLike;
 
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3718,9 +3741,9 @@ module.exports = isObjectLike;
 
 var _prodInvariant = __webpack_require__(3);
 
-var EventPluginRegistry = __webpack_require__(50);
-var EventPluginUtils = __webpack_require__(75);
-var ReactErrorUtils = __webpack_require__(79);
+var EventPluginRegistry = __webpack_require__(51);
+var EventPluginUtils = __webpack_require__(76);
+var ReactErrorUtils = __webpack_require__(80);
 
 var accumulateInto = __webpack_require__(143);
 var forEachAccumulated = __webpack_require__(144);
@@ -3980,7 +4003,7 @@ module.exports = EventPluginHub;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3996,8 +4019,8 @@ module.exports = EventPluginHub;
 
 
 
-var EventPluginHub = __webpack_require__(31);
-var EventPluginUtils = __webpack_require__(75);
+var EventPluginHub = __webpack_require__(32);
+var EventPluginUtils = __webpack_require__(76);
 
 var accumulateInto = __webpack_require__(143);
 var forEachAccumulated = __webpack_require__(144);
@@ -4120,7 +4143,7 @@ module.exports = EventPropagators;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 33 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4171,7 +4194,7 @@ var ReactInstanceMap = {
 module.exports = ReactInstanceMap;
 
 /***/ }),
-/* 34 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4189,7 +4212,7 @@ module.exports = ReactInstanceMap;
 
 var SyntheticEvent = __webpack_require__(16);
 
-var getEventTarget = __webpack_require__(84);
+var getEventTarget = __webpack_require__(85);
 
 /**
  * @interface UIEvent
@@ -4235,7 +4258,7 @@ SyntheticEvent.augmentClass(SyntheticUIEvent, UIEventInterface);
 module.exports = SyntheticUIEvent;
 
 /***/ }),
-/* 35 */
+/* 36 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4245,7 +4268,7 @@ var KEY_PREFIX = 'reduxPersist:';
 var REHYDRATE = 'persist/REHYDRATE';
 
 /***/ }),
-/* 36 */
+/* 37 */
 /***/ (function(module, exports) {
 
 var g;
@@ -4272,7 +4295,7 @@ module.exports = g;
 
 
 /***/ }),
-/* 37 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4299,7 +4322,7 @@ var _isArray = __webpack_require__(19);
 
 var _isArray2 = _interopRequireDefault(_isArray);
 
-var _isObject = __webpack_require__(29);
+var _isObject = __webpack_require__(30);
 
 var _isObject2 = _interopRequireDefault(_isObject);
 
@@ -4468,7 +4491,7 @@ function endDrag() {
 }
 
 /***/ }),
-/* 38 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4515,7 +4538,7 @@ function removeTarget(targetId) {
 }
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4541,7 +4564,7 @@ module.exports = emptyObject;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4598,7 +4621,7 @@ module.exports = function hoistNonReactStatics(targetComponent, sourceComponent,
 
 
 /***/ }),
-/* 41 */
+/* 42 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4670,10 +4693,10 @@ function isPlainObject(value) {
 
 
 /***/ }),
-/* 42 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var eq = __webpack_require__(47);
+var eq = __webpack_require__(48);
 
 /**
  * Gets the index at which the `key` is found in `array` of key-value pairs.
@@ -4697,10 +4720,10 @@ module.exports = assocIndexOf;
 
 
 /***/ }),
-/* 43 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Symbol = __webpack_require__(62),
+var Symbol = __webpack_require__(63),
     getRawTag = __webpack_require__(272),
     objectToString = __webpack_require__(296);
 
@@ -4731,7 +4754,7 @@ module.exports = baseGetTag;
 
 
 /***/ }),
-/* 44 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var isKeyable = __webpack_require__(281);
@@ -4755,7 +4778,7 @@ module.exports = getMapData;
 
 
 /***/ }),
-/* 45 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseIsNative = __webpack_require__(259),
@@ -4778,10 +4801,10 @@ module.exports = getNative;
 
 
 /***/ }),
-/* 46 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getNative = __webpack_require__(45);
+var getNative = __webpack_require__(46);
 
 /* Built-in method references that are verified to be native. */
 var nativeCreate = getNative(Object, 'create');
@@ -4790,7 +4813,7 @@ module.exports = nativeCreate;
 
 
 /***/ }),
-/* 47 */
+/* 48 */
 /***/ (function(module, exports) {
 
 /**
@@ -4833,11 +4856,11 @@ module.exports = eq;
 
 
 /***/ }),
-/* 48 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isArrayLike = __webpack_require__(68),
-    isObjectLike = __webpack_require__(30);
+var isArrayLike = __webpack_require__(69),
+    isObjectLike = __webpack_require__(31);
 
 /**
  * This method is like `_.isArrayLike` except that it also checks if `value`
@@ -4872,7 +4895,7 @@ module.exports = isArrayLikeObject;
 
 
 /***/ }),
-/* 49 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4897,7 +4920,7 @@ function checkDecoratorArguments(functionName, signature) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 50 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5156,7 +5179,7 @@ module.exports = EventPluginRegistry;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 51 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5174,12 +5197,12 @@ module.exports = EventPluginRegistry;
 
 var _assign = __webpack_require__(4);
 
-var EventPluginRegistry = __webpack_require__(50);
+var EventPluginRegistry = __webpack_require__(51);
 var ReactEventEmitterMixin = __webpack_require__(371);
 var ViewportMetrics = __webpack_require__(142);
 
 var getVendorPrefixedEventName = __webpack_require__(406);
-var isEventSupported = __webpack_require__(85);
+var isEventSupported = __webpack_require__(86);
 
 /**
  * Summary of `ReactBrowserEventEmitter` event handling:
@@ -5485,7 +5508,7 @@ var ReactBrowserEventEmitter = _assign({}, ReactEventEmitterMixin, {
 module.exports = ReactBrowserEventEmitter;
 
 /***/ }),
-/* 52 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5501,10 +5524,10 @@ module.exports = ReactBrowserEventEmitter;
 
 
 
-var SyntheticUIEvent = __webpack_require__(34);
+var SyntheticUIEvent = __webpack_require__(35);
 var ViewportMetrics = __webpack_require__(142);
 
-var getEventModifierState = __webpack_require__(83);
+var getEventModifierState = __webpack_require__(84);
 
 /**
  * @interface MouseEvent
@@ -5562,7 +5585,7 @@ SyntheticUIEvent.augmentClass(SyntheticMouseEvent, MouseEventInterface);
 module.exports = SyntheticMouseEvent;
 
 /***/ }),
-/* 53 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5796,7 +5819,7 @@ module.exports = TransactionImpl;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 54 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5923,7 +5946,7 @@ function escapeTextContentForBrowser(text) {
 module.exports = escapeTextContentForBrowser;
 
 /***/ }),
-/* 55 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5940,12 +5963,12 @@ module.exports = escapeTextContentForBrowser;
 
 
 var ExecutionEnvironment = __webpack_require__(7);
-var DOMNamespaces = __webpack_require__(74);
+var DOMNamespaces = __webpack_require__(75);
 
 var WHITESPACE_TEST = /^[ \r\n\t\f]/;
 var NONVISIBLE_TEST = /<(!--|link|noscript|meta|script|style)[ \r\n\t\f\/>]/;
 
-var createMicrosoftUnsafeLocalFunction = __webpack_require__(81);
+var createMicrosoftUnsafeLocalFunction = __webpack_require__(82);
 
 // SVG temp container for IE lacking innerHTML
 var reusableSVGContainer;
@@ -6026,7 +6049,7 @@ if (ExecutionEnvironment.canUseDOM) {
 module.exports = setInnerHTML;
 
 /***/ }),
-/* 56 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6058,7 +6081,7 @@ module.exports = canDefineProperty;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 57 */
+/* 58 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6077,7 +6100,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /***/ }),
-/* 58 */
+/* 59 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6114,7 +6137,7 @@ if (process.env.NODE_ENV !== 'production' && typeof isCrushed.name === 'string' 
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 59 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6130,7 +6153,7 @@ function isDisposable(obj) {
 module.exports = exports['default'];
 
 /***/ }),
-/* 60 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6203,7 +6226,7 @@ function shallowEqual(objA, objB) {
 module.exports = shallowEqual;
 
 /***/ }),
-/* 61 */
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var MapCache = __webpack_require__(105),
@@ -6236,10 +6259,10 @@ module.exports = SetCache;
 
 
 /***/ }),
-/* 62 */
+/* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var root = __webpack_require__(28);
+var root = __webpack_require__(29);
 
 /** Built-in value references. */
 var Symbol = root.Symbol;
@@ -6248,7 +6271,7 @@ module.exports = Symbol;
 
 
 /***/ }),
-/* 63 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseIndexOf = __webpack_require__(255);
@@ -6271,7 +6294,7 @@ module.exports = arrayIncludes;
 
 
 /***/ }),
-/* 64 */
+/* 65 */
 /***/ (function(module, exports) {
 
 /**
@@ -6299,7 +6322,7 @@ module.exports = arrayIncludesWith;
 
 
 /***/ }),
-/* 65 */
+/* 66 */
 /***/ (function(module, exports) {
 
 /**
@@ -6326,7 +6349,7 @@ module.exports = arrayMap;
 
 
 /***/ }),
-/* 66 */
+/* 67 */
 /***/ (function(module, exports) {
 
 /**
@@ -6346,7 +6369,7 @@ module.exports = baseUnary;
 
 
 /***/ }),
-/* 67 */
+/* 68 */
 /***/ (function(module, exports) {
 
 /**
@@ -6365,7 +6388,7 @@ module.exports = cacheHas;
 
 
 /***/ }),
-/* 68 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var isFunction = __webpack_require__(117),
@@ -6404,7 +6427,7 @@ module.exports = isArrayLike;
 
 
 /***/ }),
-/* 69 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6425,7 +6448,7 @@ module.exports = ReactPropTypesSecret;
 
 
 /***/ }),
-/* 70 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6439,7 +6462,7 @@ var URL = exports.URL = '__NATIVE_URL__';
 var TEXT = exports.TEXT = '__NATIVE_TEXT__';
 
 /***/ }),
-/* 71 */
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6497,7 +6520,7 @@ Object.defineProperty(exports, 'DropTarget', {
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 72 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6538,7 +6561,7 @@ function shallowEqual(objA, objB) {
 }
 
 /***/ }),
-/* 73 */
+/* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6554,13 +6577,13 @@ function shallowEqual(objA, objB) {
 
 
 
-var DOMLazyTree = __webpack_require__(24);
+var DOMLazyTree = __webpack_require__(25);
 var Danger = __webpack_require__(344);
 var ReactDOMComponentTree = __webpack_require__(5);
 var ReactInstrumentation = __webpack_require__(12);
 
-var createMicrosoftUnsafeLocalFunction = __webpack_require__(81);
-var setInnerHTML = __webpack_require__(55);
+var createMicrosoftUnsafeLocalFunction = __webpack_require__(82);
+var setInnerHTML = __webpack_require__(56);
 var setTextContent = __webpack_require__(150);
 
 function getNodeAfter(parentNode, node) {
@@ -6770,7 +6793,7 @@ module.exports = DOMChildrenOperations;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 74 */
+/* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6795,7 +6818,7 @@ var DOMNamespaces = {
 module.exports = DOMNamespaces;
 
 /***/ }),
-/* 75 */
+/* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6813,7 +6836,7 @@ module.exports = DOMNamespaces;
 
 var _prodInvariant = __webpack_require__(3);
 
-var ReactErrorUtils = __webpack_require__(79);
+var ReactErrorUtils = __webpack_require__(80);
 
 var invariant = __webpack_require__(1);
 var warning = __webpack_require__(2);
@@ -7027,7 +7050,7 @@ module.exports = EventPluginUtils;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 76 */
+/* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7091,7 +7114,7 @@ var KeyEscapeUtils = {
 module.exports = KeyEscapeUtils;
 
 /***/ }),
-/* 77 */
+/* 78 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7112,7 +7135,7 @@ var _prodInvariant = __webpack_require__(3);
 var ReactPropTypesSecret = __webpack_require__(141);
 var propTypesFactory = __webpack_require__(121);
 
-var React = __webpack_require__(26);
+var React = __webpack_require__(27);
 var PropTypes = propTypesFactory(React.isValidElement);
 
 var invariant = __webpack_require__(1);
@@ -7235,7 +7258,7 @@ module.exports = LinkedValueUtils;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 78 */
+/* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7285,7 +7308,7 @@ module.exports = ReactComponentEnvironment;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 79 */
+/* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7367,7 +7390,7 @@ module.exports = ReactErrorUtils;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 80 */
+/* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7386,7 +7409,7 @@ module.exports = ReactErrorUtils;
 var _prodInvariant = __webpack_require__(3);
 
 var ReactCurrentOwner = __webpack_require__(14);
-var ReactInstanceMap = __webpack_require__(33);
+var ReactInstanceMap = __webpack_require__(34);
 var ReactInstrumentation = __webpack_require__(12);
 var ReactUpdates = __webpack_require__(13);
 
@@ -7607,7 +7630,7 @@ module.exports = ReactUpdateQueue;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 81 */
+/* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7644,7 +7667,7 @@ var createMicrosoftUnsafeLocalFunction = function (func) {
 module.exports = createMicrosoftUnsafeLocalFunction;
 
 /***/ }),
-/* 82 */
+/* 83 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7699,7 +7722,7 @@ function getEventCharCode(nativeEvent) {
 module.exports = getEventCharCode;
 
 /***/ }),
-/* 83 */
+/* 84 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7747,7 +7770,7 @@ function getEventModifierState(nativeEvent) {
 module.exports = getEventModifierState;
 
 /***/ }),
-/* 84 */
+/* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7787,7 +7810,7 @@ function getEventTarget(nativeEvent) {
 module.exports = getEventTarget;
 
 /***/ }),
-/* 85 */
+/* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7852,7 +7875,7 @@ function isEventSupported(eventNameSuffix, capture) {
 module.exports = isEventSupported;
 
 /***/ }),
-/* 86 */
+/* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7899,7 +7922,7 @@ function shouldUpdateReactComponent(prevElement, nextElement) {
 module.exports = shouldUpdateReactComponent;
 
 /***/ }),
-/* 87 */
+/* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8276,7 +8299,7 @@ module.exports = validateDOMNesting;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 88 */
+/* 89 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8304,7 +8327,7 @@ function warning(message) {
 }
 
 /***/ }),
-/* 89 */
+/* 90 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8375,29 +8398,6 @@ module.exports = lowPriorityWarning;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 90 */
-/***/ (function(module, exports) {
-
-/**
- * Export `uid`
- */
-
-module.exports = uid;
-
-/**
- * Create a `uid`
- *
- * @param {String} len
- * @return {String} uid
- */
-
-function uid(len) {
-  len = len || 7;
-  return Math.random().toString(35).substr(2, len);
-}
-
-
-/***/ }),
 /* 91 */
 /***/ (function(module, exports) {
 
@@ -8440,9 +8440,10 @@ var EDIT_BOARD = exports.EDIT_BOARD = 'EDIT_BOARD';
 var DELETE_BOARD = exports.DELETE_BOARD = 'DELETE_BOARD';
 var SAVE_BOARD = exports.SAVE_BOARD = 'SAVE_BOARD';
 
-var createBoard = exports.createBoard = function createBoard() {
+var createBoard = exports.createBoard = function createBoard(boardId) {
   return {
-    type: CREATE_BOARD
+    type: CREATE_BOARD,
+    id: boardId
   };
 };
 
@@ -8478,11 +8479,42 @@ var editBoard = exports.editBoard = function editBoard(boardId) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.boardId = undefined;
+
+var _BoardList = __webpack_require__(186);
+
+Object.defineProperty(exports, 'default', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_BoardList).default;
+  }
+});
+
+var _BoardsReducer = __webpack_require__(94);
+
+Object.defineProperty(exports, 'reducer', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_BoardsReducer).default;
+  }
+});
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/***/ }),
+/* 94 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.editBoard = exports.saveBoard = exports.boardsInitialState = exports.initialBoardId = undefined;
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _uid = __webpack_require__(90);
+var _uid = __webpack_require__(23);
 
 var _uid2 = _interopRequireDefault(_uid);
 
@@ -8492,10 +8524,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
-var boardId = exports.boardId = (0, _uid2.default)();
+var initialBoardId = exports.initialBoardId = (0, _uid2.default)();
 
-var boardsInitialState = [{
-  id: boardId,
+var boardsInitialState = exports.boardsInitialState = [{
+  id: initialBoardId,
   name: 'To do',
   editMode: false
 }, {
@@ -8508,21 +8540,26 @@ var boardsInitialState = [{
   editMode: false
 }];
 
-var saveBoard = function saveBoard(state, board) {
-  if (board.name !== '') {
-    return state.map(function (item) {
-      return item.id === board.id ? _extends({}, item, { name: board.name, editMode: false }) : item;
-    });
-  } else {
-    return state.filter(function (b) {
-      return b.id !== board.id;
+var saveBoard = exports.saveBoard = function saveBoard(state, board) {
+  if (board.name === '') {
+    return state.filter(function (item) {
+      return item.id !== board.id;
     });
   }
+  return state.map(function (item) {
+    if (item.id === board.id) {
+      return _extends({}, item, { name: board.name, editMode: false });
+    }
+    return item;
+  });
 };
 
-var editBoard = function editBoard(state, boardId) {
+var editBoard = exports.editBoard = function editBoard(state, boardId) {
   return state.map(function (item) {
-    return item.id === boardId ? _extends({}, item, { editMode: true }) : _extends({}, item, { editMode: false });
+    if (item.id === boardId) {
+      return _extends({}, item, { editMode: true });
+    }
+    return _extends({}, item, { editMode: false });
   });
 };
 
@@ -8533,7 +8570,7 @@ var boards = function boards() {
   switch (action.type) {
     case _Boards.CREATE_BOARD:
       return [].concat(_toConsumableArray(state), [{
-        id: (0, _uid2.default)(),
+        id: action.id,
         name: '',
         editMode: true
       }]);
@@ -8541,45 +8578,12 @@ var boards = function boards() {
       return saveBoard(state, { id: action.id, name: action.name });
     case _Boards.EDIT_BOARD:
       return editBoard(state, action.id);
-    case _Boards.DELETE_BOARD:
-      return state;
     default:
       return state;
   }
 };
 
 exports.default = boards;
-
-/***/ }),
-/* 94 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _Boards = __webpack_require__(178);
-
-Object.defineProperty(exports, 'default', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_Boards).default;
-  }
-});
-
-var _BoardsReducer = __webpack_require__(93);
-
-Object.defineProperty(exports, 'reducer', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_BoardsReducer).default;
-  }
-});
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
 /* 95 */
@@ -8591,7 +8595,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// Types
+// ActionTypes
 var CREATE_CARD = exports.CREATE_CARD = 'CREATE_CARD';
 var EDIT_CARD = exports.EDIT_CARD = 'EDIT_CARD';
 var DELETE_CARD = exports.DELETE_CARD = 'DELETE_CARD';
@@ -8599,9 +8603,10 @@ var SAVE_CARD = exports.SAVE_CARD = 'SAVE_CARD';
 var CHANGE_BOARD = exports.CHANGE_BOARD = 'CHANGE_BOARD';
 
 // Actions
-var createCard = exports.createCard = function createCard(boardId) {
+var createCard = exports.createCard = function createCard(id, boardId) {
   return {
     type: CREATE_CARD,
+    id: id,
     boardId: boardId
   };
 };
@@ -8647,16 +8652,16 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Cards = __webpack_require__(187);
+var _CardList = __webpack_require__(195);
 
 Object.defineProperty(exports, 'default', {
   enumerable: true,
   get: function get() {
-    return _interopRequireDefault(_Cards).default;
+    return _interopRequireDefault(_CardList).default;
   }
 });
 
-var _CardsReducer = __webpack_require__(188);
+var _CardsReducer = __webpack_require__(196);
 
 Object.defineProperty(exports, 'reducer', {
   enumerable: true,
@@ -8743,9 +8748,9 @@ var _intersection = __webpack_require__(308);
 
 var _intersection2 = _interopRequireDefault(_intersection);
 
-var _dragDrop = __webpack_require__(37);
+var _dragDrop = __webpack_require__(38);
 
-var _registry = __webpack_require__(38);
+var _registry = __webpack_require__(39);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -8838,7 +8843,7 @@ exports.default = dragOffset;
 exports.getSourceClientOffset = getSourceClientOffset;
 exports.getDifferenceFromInitialOffset = getDifferenceFromInitialOffset;
 
-var _dragDrop = __webpack_require__(37);
+var _dragDrop = __webpack_require__(38);
 
 var initialState = {
 	initialSourceClientOffset: null,
@@ -9214,12 +9219,12 @@ module.exports = baseAssignValue;
 /* 108 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var SetCache = __webpack_require__(61),
-    arrayIncludes = __webpack_require__(63),
-    arrayIncludesWith = __webpack_require__(64),
-    arrayMap = __webpack_require__(65),
-    baseUnary = __webpack_require__(66),
-    cacheHas = __webpack_require__(67);
+var SetCache = __webpack_require__(62),
+    arrayIncludes = __webpack_require__(64),
+    arrayIncludesWith = __webpack_require__(65),
+    arrayMap = __webpack_require__(66),
+    baseUnary = __webpack_require__(67),
+    cacheHas = __webpack_require__(68);
 
 /** Used as the size to enable large array optimizations. */
 var LARGE_ARRAY_SIZE = 200;
@@ -9331,10 +9336,10 @@ module.exports = baseFlatten;
 /* 110 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var SetCache = __webpack_require__(61),
-    arrayIncludes = __webpack_require__(63),
-    arrayIncludesWith = __webpack_require__(64),
-    cacheHas = __webpack_require__(67),
+var SetCache = __webpack_require__(62),
+    arrayIncludes = __webpack_require__(64),
+    arrayIncludesWith = __webpack_require__(65),
+    cacheHas = __webpack_require__(68),
     createSet = __webpack_require__(269),
     setToArray = __webpack_require__(114);
 
@@ -9409,7 +9414,7 @@ module.exports = baseUniq;
 /* 111 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getNative = __webpack_require__(45);
+var getNative = __webpack_require__(46);
 
 var defineProperty = (function() {
   try {
@@ -9431,7 +9436,7 @@ var freeGlobal = typeof global == 'object' && global && global.Object === Object
 
 module.exports = freeGlobal;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(36)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(37)))
 
 /***/ }),
 /* 113 */
@@ -9517,7 +9522,7 @@ module.exports = identity;
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseIsArguments = __webpack_require__(257),
-    isObjectLike = __webpack_require__(30);
+    isObjectLike = __webpack_require__(31);
 
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
@@ -9558,8 +9563,8 @@ module.exports = isArguments;
 /* 117 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseGetTag = __webpack_require__(43),
-    isObject = __webpack_require__(29);
+var baseGetTag = __webpack_require__(44),
+    isObject = __webpack_require__(30);
 
 /** `Object#toString` result references. */
 var asyncTag = '[object AsyncFunction]',
@@ -9666,8 +9671,8 @@ module.exports = noop;
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseDifference = __webpack_require__(108),
-    baseRest = __webpack_require__(23),
-    isArrayLikeObject = __webpack_require__(48);
+    baseRest = __webpack_require__(24),
+    isArrayLikeObject = __webpack_require__(49);
 
 /**
  * Creates an array excluding all given values using
@@ -9746,7 +9751,7 @@ var emptyFunction = __webpack_require__(11);
 var invariant = __webpack_require__(1);
 var warning = __webpack_require__(2);
 
-var ReactPropTypesSecret = __webpack_require__(69);
+var ReactPropTypesSecret = __webpack_require__(70);
 var checkPropTypes = __webpack_require__(316);
 
 module.exports = function(isValidElement, throwOnDirectAccess) {
@@ -10306,11 +10311,11 @@ var _invariant = __webpack_require__(8);
 
 var _invariant2 = _interopRequireDefault(_invariant);
 
-var _hoistNonReactStatics = __webpack_require__(40);
+var _hoistNonReactStatics = __webpack_require__(41);
 
 var _hoistNonReactStatics2 = _interopRequireDefault(_hoistNonReactStatics);
 
-var _checkDecoratorArguments = __webpack_require__(49);
+var _checkDecoratorArguments = __webpack_require__(50);
 
 var _checkDecoratorArguments2 = _interopRequireDefault(_checkDecoratorArguments);
 
@@ -10411,7 +10416,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = areOptionsEqual;
 
-var _shallowEqual = __webpack_require__(72);
+var _shallowEqual = __webpack_require__(73);
 
 var _shallowEqual2 = _interopRequireDefault(_shallowEqual);
 
@@ -10462,11 +10467,11 @@ var _invariant = __webpack_require__(8);
 
 var _invariant2 = _interopRequireDefault(_invariant);
 
-var _hoistNonReactStatics = __webpack_require__(40);
+var _hoistNonReactStatics = __webpack_require__(41);
 
 var _hoistNonReactStatics2 = _interopRequireDefault(_hoistNonReactStatics);
 
-var _shallowEqual = __webpack_require__(72);
+var _shallowEqual = __webpack_require__(73);
 
 var _shallowEqual2 = _interopRequireDefault(_shallowEqual);
 
@@ -11365,7 +11370,7 @@ module.exports = ReactDOMComponentFlags;
 
 var _assign = __webpack_require__(4);
 
-var LinkedValueUtils = __webpack_require__(77);
+var LinkedValueUtils = __webpack_require__(78);
 var ReactDOMComponentTree = __webpack_require__(5);
 var ReactUpdates = __webpack_require__(13);
 
@@ -11835,27 +11840,27 @@ module.exports = ReactInputSelection;
 
 var _prodInvariant = __webpack_require__(3);
 
-var DOMLazyTree = __webpack_require__(24);
+var DOMLazyTree = __webpack_require__(25);
 var DOMProperty = __webpack_require__(18);
-var React = __webpack_require__(26);
-var ReactBrowserEventEmitter = __webpack_require__(51);
+var React = __webpack_require__(27);
+var ReactBrowserEventEmitter = __webpack_require__(52);
 var ReactCurrentOwner = __webpack_require__(14);
 var ReactDOMComponentTree = __webpack_require__(5);
 var ReactDOMContainerInfo = __webpack_require__(354);
 var ReactDOMFeatureFlags = __webpack_require__(356);
 var ReactFeatureFlags = __webpack_require__(136);
-var ReactInstanceMap = __webpack_require__(33);
+var ReactInstanceMap = __webpack_require__(34);
 var ReactInstrumentation = __webpack_require__(12);
 var ReactMarkupChecksum = __webpack_require__(376);
-var ReactReconciler = __webpack_require__(25);
-var ReactUpdateQueue = __webpack_require__(80);
+var ReactReconciler = __webpack_require__(26);
+var ReactUpdateQueue = __webpack_require__(81);
 var ReactUpdates = __webpack_require__(13);
 
-var emptyObject = __webpack_require__(39);
+var emptyObject = __webpack_require__(40);
 var instantiateReactComponent = __webpack_require__(148);
 var invariant = __webpack_require__(1);
-var setInnerHTML = __webpack_require__(55);
-var shouldUpdateReactComponent = __webpack_require__(86);
+var setInnerHTML = __webpack_require__(56);
+var shouldUpdateReactComponent = __webpack_require__(87);
 var warning = __webpack_require__(2);
 
 var ATTR_NAME = DOMProperty.ID_ATTRIBUTE_NAME;
@@ -12380,7 +12385,7 @@ module.exports = ReactMount;
 
 var _prodInvariant = __webpack_require__(3);
 
-var React = __webpack_require__(26);
+var React = __webpack_require__(27);
 
 var invariant = __webpack_require__(1);
 
@@ -12968,8 +12973,8 @@ module.exports = isTextInputElement;
 
 
 var ExecutionEnvironment = __webpack_require__(7);
-var escapeTextContentForBrowser = __webpack_require__(54);
-var setInnerHTML = __webpack_require__(55);
+var escapeTextContentForBrowser = __webpack_require__(55);
+var setInnerHTML = __webpack_require__(56);
 
 /**
  * Set the textContent property of a node, ensuring that whitespace is preserved
@@ -13031,7 +13036,7 @@ var REACT_ELEMENT_TYPE = __webpack_require__(370);
 
 var getIteratorFn = __webpack_require__(404);
 var invariant = __webpack_require__(1);
-var KeyEscapeUtils = __webpack_require__(76);
+var KeyEscapeUtils = __webpack_require__(77);
 var warning = __webpack_require__(2);
 
 var SEPARATOR = '.';
@@ -13195,7 +13200,7 @@ module.exports = traverseAllChildren;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/* harmony export (immutable) */ __webpack_exports__["a"] = connectAdvanced;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_hoist_non_react_statics__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_hoist_non_react_statics__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_hoist_non_react_statics___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_hoist_non_react_statics__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_invariant__);
@@ -13585,8 +13590,8 @@ var storeShape = __WEBPACK_IMPORTED_MODULE_0_prop_types___default.a.shape({
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = verifyPlainObject;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_es_isPlainObject__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__warning__ = __webpack_require__(88);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_es_isPlainObject__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__warning__ = __webpack_require__(89);
 
 
 
@@ -13613,15 +13618,15 @@ function verifyPlainObject(value, displayName, methodName) {
 
 
 
-var _prodInvariant = __webpack_require__(27),
+var _prodInvariant = __webpack_require__(28),
     _assign = __webpack_require__(4);
 
 var ReactNoopUpdateQueue = __webpack_require__(159);
 
-var canDefineProperty = __webpack_require__(56);
-var emptyObject = __webpack_require__(39);
+var canDefineProperty = __webpack_require__(57);
+var emptyObject = __webpack_require__(40);
 var invariant = __webpack_require__(1);
-var lowPriorityWarning = __webpack_require__(89);
+var lowPriorityWarning = __webpack_require__(90);
 
 /**
  * Base class helpers for the updating state of a component.
@@ -13800,10 +13805,10 @@ var ReactElement = __webpack_require__(22);
 
 var checkReactTypeSpec = __webpack_require__(426);
 
-var canDefineProperty = __webpack_require__(56);
+var canDefineProperty = __webpack_require__(57);
 var getIteratorFn = __webpack_require__(160);
 var warning = __webpack_require__(2);
-var lowPriorityWarning = __webpack_require__(89);
+var lowPriorityWarning = __webpack_require__(90);
 
 function getDeclarationErrorAddendum() {
   if (ReactCurrentOwner.current) {
@@ -14184,7 +14189,7 @@ module.exports = getIteratorFn;
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/* harmony export (immutable) */ __webpack_exports__["a"] = createPersistor;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__constants__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__constants__ = __webpack_require__(36);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__defaults_asyncLocalStorage__ = __webpack_require__(162);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__purgeStoredState__ = __webpack_require__(164);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_json_stringify_safe__ = __webpack_require__(237);
@@ -14477,7 +14482,7 @@ function getStorage(type) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/* harmony export (immutable) */ __webpack_exports__["a"] = getStoredState;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__constants__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__constants__ = __webpack_require__(36);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__defaults_asyncLocalStorage__ = __webpack_require__(162);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -14573,7 +14578,7 @@ function defaultDeserializer(serial) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/* harmony export (immutable) */ __webpack_exports__["a"] = purgeStoredState;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__constants__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__constants__ = __webpack_require__(36);
 
 
 function purgeStoredState(config, keys) {
@@ -14630,7 +14635,7 @@ var setImmediate = hasNativeSupport ? function (fn, ms) {
 };
 
 /* harmony default export */ __webpack_exports__["a"] = (setImmediate);
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(36)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(37)))
 
 /***/ }),
 /* 166 */
@@ -14678,7 +14683,7 @@ function compose() {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return ActionTypes; });
 /* harmony export (immutable) */ __webpack_exports__["a"] = createStore;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_es_isPlainObject__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_es_isPlainObject__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_symbol_observable__ = __webpack_require__(169);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_symbol_observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_symbol_observable__);
 
@@ -14998,9 +15003,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _redux = __webpack_require__(58);
+var _redux = __webpack_require__(59);
 
-var _Boards = __webpack_require__(94);
+var _Boards = __webpack_require__(93);
 
 var _Cards = __webpack_require__(96);
 
@@ -15361,7 +15366,7 @@ rawAsap.makeRequestCallFromTimer = makeRequestCallFromTimer;
 // back into ASAP proper.
 // https://github.com/tildeio/rsvp.js/blob/cddf7232546a9cf858524b75cde6f9edf72620a7/lib/rsvp/asap.js
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(36)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(37)))
 
 /***/ }),
 /* 176 */
@@ -15382,9 +15387,9 @@ var _reactDndHtml5Backend = __webpack_require__(324);
 
 var _reactDndHtml5Backend2 = _interopRequireDefault(_reactDndHtml5Backend);
 
-var _reactDnd = __webpack_require__(71);
+var _reactDnd = __webpack_require__(72);
 
-var _Boards = __webpack_require__(94);
+var _Boards = __webpack_require__(93);
 
 var _Boards2 = _interopRequireDefault(_Boards);
 
@@ -15424,9 +15429,9 @@ var _reactDom = __webpack_require__(172);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _redux = __webpack_require__(58);
+var _redux = __webpack_require__(59);
 
-var _reactRedux = __webpack_require__(57);
+var _reactRedux = __webpack_require__(58);
 
 var _reduxPersist = __webpack_require__(173);
 
@@ -15460,55 +15465,7 @@ _reactDom2.default.render(_react2.default.createElement(
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-
-var _react = __webpack_require__(6);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactRedux = __webpack_require__(57);
-
-var _Boards = __webpack_require__(92);
-
-var _BoardsList = __webpack_require__(184);
-
-var _BoardsList2 = _interopRequireDefault(_BoardsList);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var mapStateToProps = function mapStateToProps(state) {
-  return {
-    boards: state.boards
-  };
-};
-
-var mapDispatchToProps = function mapDispatchToProps(dispatch) {
-  return {
-    onBtnAddBoardClick: function onBtnAddBoardClick() {
-      return dispatch((0, _Boards.createBoard)());
-    },
-    onFieldNameBlur: function onFieldNameBlur(board) {
-      return dispatch((0, _Boards.saveBoard)(board));
-    },
-    onClickName: function onClickName(boardId) {
-      return dispatch((0, _Boards.editBoard)(boardId));
-    }
-  };
-};
-
-var Boards = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(_BoardsList2.default);
-
-exports.default = Boards;
-
-/***/ }),
-/* 179 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.Board = exports.getClassNames = undefined;
 
 var _react = __webpack_require__(6);
 
@@ -15518,17 +15475,17 @@ var _propTypes = __webpack_require__(9);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _uid = __webpack_require__(90);
-
-var _uid2 = _interopRequireDefault(_uid);
-
-var _reactDnd = __webpack_require__(71);
+var _reactDnd = __webpack_require__(72);
 
 var _classnames = __webpack_require__(97);
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-var _BoardForm = __webpack_require__(182);
+var _uid = __webpack_require__(23);
+
+var _uid2 = _interopRequireDefault(_uid);
+
+var _BoardForm = __webpack_require__(181);
 
 var _BoardForm2 = _interopRequireDefault(_BoardForm);
 
@@ -15544,15 +15501,16 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+/* istanbul ignore next */
 var boardSpec = {
   drop: function drop(props) {
     return {
       boardId: props.id
     };
   }
-
 };
 
+/* istanbul ignore next */
 function collect(connect, monitor) {
   return {
     connectDropTarget: connect.dropTarget(),
@@ -15560,13 +15518,13 @@ function collect(connect, monitor) {
   };
 }
 
-var getClassNames = function getClassNames(isOver) {
+var getClassNames = exports.getClassNames = function getClassNames(isOver) {
   var _classNames;
 
   return (0, _classnames2.default)((_classNames = {}, _defineProperty(_classNames, _Board2.default.board, true), _defineProperty(_classNames, _Board2.default['is-over'], isOver), _classNames));
 };
 
-var Board = function Board(_ref) {
+var Board = exports.Board = function Board(_ref) {
   var name = _ref.name,
       id = _ref.id,
       editMode = _ref.editMode,
@@ -15577,19 +15535,36 @@ var Board = function Board(_ref) {
   return connectDropTarget(_react2.default.createElement(
     'div',
     { className: getClassNames(isOver) },
-    _react2.default.createElement(_BoardForm2.default, { editMode: editMode, id: id, name: name, onFieldNameBlur: onFieldNameBlur, onClickName: onClickName }),
+    _react2.default.createElement(_BoardForm2.default, {
+      editMode: editMode,
+      id: (0, _uid2.default)(),
+      name: name,
+      onFieldNameBlur: onFieldNameBlur,
+      onClickName: onClickName
+    }),
     _react2.default.createElement(_Cards2.default, { boardId: id })
   ));
 };
 
 Board.propTypes = {
-  name: _propTypes2.default.string.isRequired
+  id: _propTypes2.default.string.isRequired,
+  editMode: _propTypes2.default.bool,
+  name: _propTypes2.default.string.isRequired,
+  onFieldNameBlur: _propTypes2.default.func.isRequired,
+  onClickName: _propTypes2.default.func.isRequired,
+  isOver: _propTypes2.default.bool,
+  connectDropTarget: _propTypes2.default.func.isRequired
+};
+
+Board.defaultProps = {
+  editMode: false,
+  isOver: false
 };
 
 exports.default = (0, _reactDnd.DropTarget)('CARD', boardSpec, collect)(Board);
 
 /***/ }),
-/* 180 */
+/* 179 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15599,7 +15574,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Board = __webpack_require__(179);
+var _Board = __webpack_require__(178);
 
 Object.defineProperty(exports, 'default', {
   enumerable: true,
@@ -15611,7 +15586,7 @@ Object.defineProperty(exports, 'default', {
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 181 */
+/* 180 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15654,27 +15629,15 @@ var BoardForm = function (_React$Component) {
     _this.state = {
       name: props.name
     };
+
+    _this.onChangeName = _this.onChangeName.bind(_this);
+    _this.onFieldNameBlur = _this.onFieldNameBlur.bind(_this);
+    _this.onFieldNameKeyup = _this.onFieldNameKeyup.bind(_this);
+    _this.onClickName = _this.onClickName.bind(_this);
     return _this;
   }
 
   _createClass(BoardForm, [{
-    key: 'onChangeName',
-    value: function onChangeName(event) {
-      this.setState({
-        name: event.target.value
-      });
-    }
-  }, {
-    key: 'onFieldNameBlur',
-    value: function onFieldNameBlur(event) {
-      var value = event.target.value;
-
-      this.props.onFieldNameBlur({
-        id: this.props.id,
-        name: value
-      });
-    }
-  }, {
     key: 'componentDidMount',
     value: function componentDidMount() {
       if (this.inputName) {
@@ -15687,6 +15650,23 @@ var BoardForm = function (_React$Component) {
       if (this.inputName) {
         this.inputName.focus();
       }
+    }
+  }, {
+    key: 'onFieldNameBlur',
+    value: function onFieldNameBlur(event) {
+      var value = event.target.value;
+
+      this.props.onFieldNameBlur({
+        id: this.props.id,
+        name: value
+      });
+    }
+  }, {
+    key: 'onChangeName',
+    value: function onChangeName(event) {
+      this.setState({
+        name: event.target.value
+      });
     }
   }, {
     key: 'onFieldNameKeyup',
@@ -15713,25 +15693,29 @@ var BoardForm = function (_React$Component) {
       var _this2 = this;
 
       var name = this.state.name;
-      var _props = this.props,
-          editMode = _props.editMode,
-          onFieldNameBlur = _props.onFieldNameBlur;
+      var editMode = this.props.editMode;
 
 
       return _react2.default.createElement(
         'div',
         { className: _BoardForm2.default['board-form'] },
-        editMode ? _react2.default.createElement('input', { type: 'text',
+        editMode ? _react2.default.createElement('input', {
+          type: 'text',
           ref: function ref(el) {
             _this2.inputName = el;
           },
-          value: name, onChange: this.onChangeName.bind(this),
-          onBlur: this.onFieldNameBlur.bind(this),
-          onKeyUp: this.onFieldNameKeyup.bind(this)
+          value: name,
+          onChange: this.onChangeName,
+          onBlur: this.onFieldNameBlur,
+          onKeyUp: this.onFieldNameKeyup
         }) : _react2.default.createElement(
           'h4',
-          { onClick: this.onClickName.bind(this) },
-          this.props.name
+          null,
+          _react2.default.createElement(
+            'button',
+            { type: 'button', onClick: this.onClickName },
+            this.props.name
+          )
         )
       );
     }
@@ -15741,6 +15725,7 @@ var BoardForm = function (_React$Component) {
 }(_react2.default.Component);
 
 BoardForm.propTypes = {
+  id: _propTypes2.default.string.isRequired,
   name: _propTypes2.default.string,
   editMode: _propTypes2.default.bool,
   onFieldNameBlur: _propTypes2.default.func,
@@ -15757,7 +15742,7 @@ BoardForm.defaultProps = {
 exports.default = BoardForm;
 
 /***/ }),
-/* 182 */
+/* 181 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15767,7 +15752,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _BoardForm = __webpack_require__(181);
+var _BoardForm = __webpack_require__(180);
 
 Object.defineProperty(exports, 'default', {
   enumerable: true,
@@ -15779,7 +15764,7 @@ Object.defineProperty(exports, 'default', {
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 183 */
+/* 182 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15797,11 +15782,15 @@ var _propTypes = __webpack_require__(9);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _Board = __webpack_require__(180);
+var _uid = __webpack_require__(23);
+
+var _uid2 = _interopRequireDefault(_uid);
+
+var _Board = __webpack_require__(179);
 
 var _Board2 = _interopRequireDefault(_Board);
 
-var _BtnAddBoard = __webpack_require__(186);
+var _BtnAddBoard = __webpack_require__(185);
 
 var _BtnAddBoard2 = _interopRequireDefault(_BtnAddBoard);
 
@@ -15816,29 +15805,30 @@ var BoardsList = function BoardsList(_ref) {
       onBtnAddBoardClick = _ref.onBtnAddBoardClick,
       onFieldNameBlur = _ref.onFieldNameBlur,
       onClickName = _ref.onClickName;
-
   return _react2.default.createElement(
     'div',
     { className: _BoardsList2.default['board-list'] },
-    boards.map(function (_ref2, i) {
+    boards.map(function (_ref2) {
       var name = _ref2.name,
           id = _ref2.id,
           editMode = _ref2.editMode;
-
-      return _react2.default.createElement(_Board2.default, { key: i, name: name, id: id, editMode: editMode, onFieldNameBlur: onFieldNameBlur, onClickName: onClickName });
+      return _react2.default.createElement(_Board2.default, { key: (0, _uid2.default)(), name: name, id: id, editMode: editMode, onFieldNameBlur: onFieldNameBlur, onClickName: onClickName });
     }),
     _react2.default.createElement(_BtnAddBoard2.default, { onClick: onBtnAddBoardClick })
   );
 };
 
 BoardsList.propTypes = {
-  boards: _propTypes2.default.arrayOf(_propTypes2.default.object)
+  boards: _propTypes2.default.arrayOf(_propTypes2.default.object).isRequired,
+  onBtnAddBoardClick: _propTypes2.default.func.isRequired,
+  onFieldNameBlur: _propTypes2.default.func.isRequired,
+  onClickName: _propTypes2.default.func.isRequired
 };
 
 exports.default = BoardsList;
 
 /***/ }),
-/* 184 */
+/* 183 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15848,7 +15838,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _BoardsList = __webpack_require__(183);
+var _BoardsList = __webpack_require__(182);
 
 Object.defineProperty(exports, 'default', {
   enumerable: true,
@@ -15860,7 +15850,7 @@ Object.defineProperty(exports, 'default', {
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 185 */
+/* 184 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15900,7 +15890,7 @@ BtnAddBoard.propTypes = {
 exports.default = BtnAddBoard;
 
 /***/ }),
-/* 186 */
+/* 185 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15910,7 +15900,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _BtnAddBoard = __webpack_require__(185);
+var _BtnAddBoard = __webpack_require__(184);
 
 Object.defineProperty(exports, 'default', {
   enumerable: true,
@@ -15922,7 +15912,7 @@ Object.defineProperty(exports, 'default', {
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 187 */
+/* 186 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15932,128 +15922,46 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _reactRedux = __webpack_require__(57);
+var _uid = __webpack_require__(23);
 
-var _Cards = __webpack_require__(95);
+var _uid2 = _interopRequireDefault(_uid);
 
-var _CardsList = __webpack_require__(196);
+var _reactRedux = __webpack_require__(58);
 
-var _CardsList2 = _interopRequireDefault(_CardsList);
+var _Boards = __webpack_require__(92);
+
+var _BoardsList = __webpack_require__(183);
+
+var _BoardsList2 = _interopRequireDefault(_BoardsList);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var filterCards = function filterCards(cards, boardId) {
-  return cards.filter(function (card) {
-    return card.boardId == boardId;
-  });
-};
-
-var mapStateToProps = function mapStateToProps(_ref, _ref2) {
-  var cards = _ref.cards;
-  var boardId = _ref2.boardId;
-
+var mapStateToProps = function mapStateToProps(state) {
   return {
-    cards: filterCards(cards, boardId),
-    boardId: boardId
+    boards: state.boards
   };
 };
 
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
-    onBtnAddCardClick: function onBtnAddCardClick(boardId) {
-      return dispatch((0, _Cards.createCard)(boardId));
+    onBtnAddBoardClick: function onBtnAddBoardClick() {
+      return dispatch((0, _Boards.createBoard)((0, _uid2.default)()));
     },
-    onSaveCard: function onSaveCard(card) {
-      return dispatch((0, _Cards.saveCard)(card));
+    onFieldNameBlur: function onFieldNameBlur(board) {
+      return dispatch((0, _Boards.saveBoard)(board));
     },
-    onEditCard: function onEditCard(cardId) {
-      return dispatch((0, _Cards.editCard)(cardId));
-    },
-    changeBoard: function changeBoard(cardId, boardId) {
-      return dispatch((0, _Cards.changeBoard)(cardId, boardId));
+    onClickName: function onClickName(boardId) {
+      return dispatch((0, _Boards.editBoard)(boardId));
     }
   };
 };
 
-var Cards = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(_CardsList2.default);
+var Boards = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(_BoardsList2.default);
 
-exports.default = Cards;
-
-/***/ }),
-/* 188 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-var _uid = __webpack_require__(90);
-
-var _uid2 = _interopRequireDefault(_uid);
-
-var _Boards = __webpack_require__(93);
-
-var _Cards = __webpack_require__(95);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
-
-var cardsInitialState = [{
-  id: (0, _uid2.default)(),
-  description: 'I must do',
-  editMode: false,
-  boardId: _Boards.boardId
-}];
-
-var saveCard = function saveCard(state, card) {
-  if (card.description !== '') {
-    return state.map(function (item) {
-      return item.id === card.id ? _extends({}, item, { description: card.description, editMode: false }) : item;
-    });
-  } else {
-    return state.filter(function (item) {
-      return item.id !== card.id;
-    });
-  }
-};
-
-var cards = function cards() {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : cardsInitialState;
-  var action = arguments[1];
-
-  switch (action.type) {
-    case _Cards.CREATE_CARD:
-      return [].concat(_toConsumableArray(state), [{
-        id: (0, _uid2.default)(),
-        description: "",
-        boardId: action.boardId,
-        editMode: true
-      }]);
-    case _Cards.SAVE_CARD:
-      return saveCard(state, { id: action.id, description: action.description });
-    case _Cards.EDIT_CARD:
-      return state.map(function (item) {
-        return item.id === action.id ? _extends({}, item, { editMode: true }) : item;
-      });
-    case _Cards.CHANGE_BOARD:
-      return state.map(function (item) {
-        return item.id === action.cardId ? _extends({}, item, { boardId: action.boardId }) : item;
-      });
-    default:
-      return state;
-  }
-};
-
-exports.default = cards;
+exports.default = Boards;
 
 /***/ }),
-/* 189 */
+/* 187 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16087,13 +15995,13 @@ var BtnAddCard = function BtnAddCard(_ref) {
 };
 
 BtnAddCard.propTypes = {
-  onClick: _propTypes2.default.func
+  onClick: _propTypes2.default.func.isRequired
 };
 
 exports.default = BtnAddCard;
 
 /***/ }),
-/* 190 */
+/* 188 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16103,7 +16011,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _BtnAddCard = __webpack_require__(189);
+var _BtnAddCard = __webpack_require__(187);
 
 Object.defineProperty(exports, 'default', {
   enumerable: true,
@@ -16115,7 +16023,7 @@ Object.defineProperty(exports, 'default', {
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 191 */
+/* 189 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16133,13 +16041,13 @@ var _propTypes = __webpack_require__(9);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _reactDnd = __webpack_require__(71);
+var _reactDnd = __webpack_require__(72);
 
 var _classnames = __webpack_require__(97);
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-var _CardForm = __webpack_require__(194);
+var _CardForm = __webpack_require__(192);
 
 var _CardForm2 = _interopRequireDefault(_CardForm);
 
@@ -16152,12 +16060,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 var cardSource = {
-  beginDrag: function beginDrag(props, monitor, component) {
+  beginDrag: function beginDrag(props) {
     return {
       id: props.id
     };
   },
-  endDrag: function endDrag(props, monitor, component) {
+  endDrag: function endDrag(props, monitor) {
     if (!monitor.getDropResult()) {
       return;
     }
@@ -16193,12 +16101,10 @@ var Card = function Card(_ref) {
       onSaveCard = _ref.onSaveCard,
       onEditCard = _ref.onEditCard,
       isDragging = _ref.isDragging,
-      connectDragSource = _ref.connectDragSource,
-      changeBoard = _ref.changeBoard;
-
+      connectDragSource = _ref.connectDragSource;
   return connectDragSource(_react2.default.createElement(
     'div',
-    { className: getClassNames(isDragging), onClick: function onClick() {
+    { role: 'presentation', className: getClassNames(isDragging), onClick: function onClick() {
         return onEditCard(id);
       } },
     editMode ? _react2.default.createElement(_CardForm2.default, { id: id, description: description, onSaveCard: onSaveCard }) : description
@@ -16206,15 +16112,23 @@ var Card = function Card(_ref) {
 };
 
 Card.propTypes = {
+  id: _propTypes2.default.string.isRequired,
   description: _propTypes2.default.string.isRequired,
+  editMode: _propTypes2.default.bool,
+  onSaveCard: _propTypes2.default.func.isRequired,
+  onEditCard: _propTypes2.default.func.isRequired,
   isDragging: _propTypes2.default.bool.isRequired,
   connectDragSource: _propTypes2.default.func.isRequired
+};
+
+Card.defaultProps = {
+  editMode: false
 };
 
 exports.default = (0, _reactDnd.DragSource)('CARD', cardSource, collect)(Card);
 
 /***/ }),
-/* 192 */
+/* 190 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16224,7 +16138,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Card = __webpack_require__(191);
+var _Card = __webpack_require__(189);
 
 Object.defineProperty(exports, 'default', {
   enumerable: true,
@@ -16236,7 +16150,7 @@ Object.defineProperty(exports, 'default', {
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 193 */
+/* 191 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16279,10 +16193,28 @@ var CardForm = function (_React$Component) {
     _this.state = {
       description: _this.props.description
     };
+
+    _this.onDescriptionChange = _this.onDescriptionChange.bind(_this);
+    _this.onDescriptionKeyDown = _this.onDescriptionKeyDown.bind(_this);
+    _this.onDescriptionBlur = _this.onDescriptionBlur.bind(_this);
     return _this;
   }
 
   _createClass(CardForm, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      if (this.el) {
+        this.el.focus();
+      }
+    }
+  }, {
+    key: 'componentDidUpdate',
+    value: function componentDidUpdate() {
+      if (this.el) {
+        this.el.focus();
+      }
+    }
+  }, {
     key: 'onDescriptionChange',
     value: function onDescriptionChange(event) {
       this.setState({
@@ -16308,33 +16240,19 @@ var CardForm = function (_React$Component) {
       });
     }
   }, {
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      if (this.el) {
-        this.el.focus();
-      }
-    }
-  }, {
-    key: 'componentDidUpdate',
-    value: function componentDidUpdate() {
-      if (this.el) {
-        this.el.focus();
-      }
-    }
-  }, {
     key: 'render',
     value: function render() {
       var _this2 = this;
 
       return _react2.default.createElement('textarea', {
         ref: function ref(el) {
-          return _this2.el = el;
+          _this2.el = el;
         },
         className: _CardForm2.default['card-form'],
         value: this.state.description,
-        onChange: this.onDescriptionChange.bind(this),
-        onKeyDown: this.onDescriptionKeyDown.bind(this),
-        onBlur: this.onDescriptionBlur.bind(this)
+        onChange: this.onDescriptionChange,
+        onKeyDown: this.onDescriptionKeyDown,
+        onBlur: this.onDescriptionBlur
       });
     }
   }]);
@@ -16342,10 +16260,16 @@ var CardForm = function (_React$Component) {
   return CardForm;
 }(_react2.default.Component);
 
+CardForm.propTypes = {
+  id: _propTypes2.default.string.isRequired,
+  description: _propTypes2.default.string.isRequired,
+  onSaveCard: _propTypes2.default.func.isRequired
+};
+
 exports.default = CardForm;
 
 /***/ }),
-/* 194 */
+/* 192 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16355,7 +16279,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _CardForm = __webpack_require__(193);
+var _CardForm = __webpack_require__(191);
 
 Object.defineProperty(exports, 'default', {
   enumerable: true,
@@ -16367,7 +16291,7 @@ Object.defineProperty(exports, 'default', {
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 195 */
+/* 193 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16385,11 +16309,15 @@ var _propTypes = __webpack_require__(9);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _Card = __webpack_require__(192);
+var _uid = __webpack_require__(23);
+
+var _uid2 = _interopRequireDefault(_uid);
+
+var _Card = __webpack_require__(190);
 
 var _Card2 = _interopRequireDefault(_Card);
 
-var _BtnAddCard = __webpack_require__(190);
+var _BtnAddCard = __webpack_require__(188);
 
 var _BtnAddCard2 = _interopRequireDefault(_BtnAddCard);
 
@@ -16406,16 +16334,15 @@ var CardsList = function CardsList(_ref) {
       onSaveCard = _ref.onSaveCard,
       onEditCard = _ref.onEditCard,
       changeBoard = _ref.changeBoard;
-
   return _react2.default.createElement(
     'ul',
     { className: _CardsList2.default['cards-list'] },
-    cards.map(function (_ref2, i) {
+    cards.map(function (_ref2) {
       var id = _ref2.id,
           description = _ref2.description,
           editMode = _ref2.editMode;
       return _react2.default.createElement(_Card2.default, {
-        key: i,
+        key: (0, _uid2.default)(),
         id: id,
         description: description,
         onSaveCard: onSaveCard,
@@ -16431,11 +16358,98 @@ var CardsList = function CardsList(_ref) {
 };
 
 CardsList.propTypes = {
-  cards: _propTypes2.default.array.isRequired,
-  onBtnAddCardClick: _propTypes2.default.func.isRequired
+  cards: _propTypes2.default.arrayOf(_propTypes2.default.object).isRequired,
+  boardId: _propTypes2.default.string.isRequired,
+  onBtnAddCardClick: _propTypes2.default.func.isRequired,
+  onSaveCard: _propTypes2.default.func.isRequired,
+  onEditCard: _propTypes2.default.func.isRequired,
+  changeBoard: _propTypes2.default.func.isRequired
 };
 
 exports.default = CardsList;
+
+/***/ }),
+/* 194 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _CardsList = __webpack_require__(193);
+
+Object.defineProperty(exports, 'default', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_CardsList).default;
+  }
+});
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/***/ }),
+/* 195 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _uid = __webpack_require__(23);
+
+var _uid2 = _interopRequireDefault(_uid);
+
+var _reactRedux = __webpack_require__(58);
+
+var _Cards = __webpack_require__(95);
+
+var _CardsList = __webpack_require__(194);
+
+var _CardsList2 = _interopRequireDefault(_CardsList);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var filterCards = function filterCards(cards, boardId) {
+  return cards.filter(function (card) {
+    return card.boardId === boardId;
+  });
+};
+
+var mapStateToProps = function mapStateToProps(_ref, _ref2) {
+  var cards = _ref.cards;
+  var boardId = _ref2.boardId;
+  return {
+    cards: filterCards(cards, boardId),
+    boardId: boardId
+  };
+};
+
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+  return {
+    onBtnAddCardClick: function onBtnAddCardClick(boardId) {
+      return dispatch((0, _Cards.createCard)((0, _uid2.default)(), boardId));
+    },
+    onSaveCard: function onSaveCard(card) {
+      return dispatch((0, _Cards.saveCard)(card));
+    },
+    onEditCard: function onEditCard(cardId) {
+      return dispatch((0, _Cards.editCard)(cardId));
+    },
+    changeBoard: function changeBoard(cardId, boardId) {
+      return dispatch((0, _Cards.changeBoard)(cardId, boardId));
+    }
+  };
+};
+
+var Cards = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(_CardsList2.default);
+
+exports.default = Cards;
 
 /***/ }),
 /* 196 */
@@ -16447,17 +16461,71 @@ exports.default = CardsList;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.saveCard = exports.cardsInitialState = undefined;
 
-var _CardsList = __webpack_require__(195);
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-Object.defineProperty(exports, 'default', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_CardsList).default;
-  }
-});
+var _uid = __webpack_require__(23);
+
+var _uid2 = _interopRequireDefault(_uid);
+
+var _Boards = __webpack_require__(94);
+
+var _Cards = __webpack_require__(95);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
+var cardsInitialState = exports.cardsInitialState = [{
+  id: (0, _uid2.default)(),
+  description: 'I must do',
+  editMode: false,
+  boardId: _Boards.initialBoardId
+}];
+
+var saveCard = exports.saveCard = function saveCard(state, card) {
+  if (card.description !== '') {
+    return state.map(function (item) {
+      if (item.id === card.id) {
+        return _extends({}, item, { description: card.description, editMode: false });
+      }
+      return item;
+    });
+  }
+  return state.filter(function (item) {
+    return item.id !== card.id;
+  });
+};
+
+var cards = function cards() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : cardsInitialState;
+  var action = arguments[1];
+
+  switch (action.type) {
+    case _Cards.CREATE_CARD:
+      return [].concat(_toConsumableArray(state), [{
+        id: action.id,
+        description: '',
+        boardId: action.boardId,
+        editMode: true
+      }]);
+    case _Cards.SAVE_CARD:
+      return saveCard(state, { id: action.id, description: action.description });
+    case _Cards.EDIT_CARD:
+      return state.map(function (item) {
+        return item.id === action.id ? _extends({}, item, { editMode: true }) : item;
+      });
+    case _Cards.CHANGE_BOARD:
+      return state.map(function (item) {
+        return item.id === action.cardId ? _extends({}, item, { boardId: action.boardId }) : item;
+      });
+    default:
+      return state;
+  }
+};
+
+exports.default = cards;
 
 /***/ }),
 /* 197 */
@@ -16478,7 +16546,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var _assign = __webpack_require__(4);
 
-var emptyObject = __webpack_require__(39);
+var emptyObject = __webpack_require__(40);
 var _invariant = __webpack_require__(1);
 
 if (process.env.NODE_ENV !== 'production') {
@@ -17382,7 +17450,7 @@ exports = module.exports = __webpack_require__(15)(true);
 
 
 // module
-exports.push([module.i, ".board-form___2wEOb > input {\n  border: 0;\n  border-bottom: 2px solid #f1f1f1;\n  background-color: rgba(0, 0, 0, 0.1);\n  outline: none;\n  color: #f1f1f1;\n  font-size: 14px;\n  width: 100%; }\n", "", {"version":3,"sources":["/Users/joao/Sites/task-tool/src/js/modules/Boards/components/BoardForm/BoardForm.sass"],"names":[],"mappings":"AAAA;EACE,UAAU;EACV,iCAAiC;EACjC,qCAAqC;EACrC,cAAc;EACd,eAAe;EACf,gBAAgB;EAChB,YAAY,EAAE","file":"BoardForm.sass","sourcesContent":[".board-form > input {\n  border: 0;\n  border-bottom: 2px solid #f1f1f1;\n  background-color: rgba(0, 0, 0, 0.1);\n  outline: none;\n  color: #f1f1f1;\n  font-size: 14px;\n  width: 100%; }\n"],"sourceRoot":""}]);
+exports.push([module.i, ".board-form___2wEOb > input {\n  border: 0;\n  border-bottom: 2px solid #f1f1f1;\n  background-color: rgba(0, 0, 0, 0.1);\n  outline: none;\n  color: #f1f1f1;\n  font-size: 14px;\n  width: 100%; }\n\n.board-form___2wEOb h4 > button {\n  background-color: transparent;\n  font-weight: bold;\n  font-size: 16px;\n  color: #f1f1f1;\n  border: 0;\n  outline: none; }\n", "", {"version":3,"sources":["/Users/joao/Sites/task-tool/src/js/modules/Boards/components/BoardForm/BoardForm.sass"],"names":[],"mappings":"AAAA;EACE,UAAU;EACV,iCAAiC;EACjC,qCAAqC;EACrC,cAAc;EACd,eAAe;EACf,gBAAgB;EAChB,YAAY,EAAE;;AAEhB;EACE,8BAA8B;EAC9B,kBAAkB;EAClB,gBAAgB;EAChB,eAAe;EACf,UAAU;EACV,cAAc,EAAE","file":"BoardForm.sass","sourcesContent":[".board-form > input {\n  border: 0;\n  border-bottom: 2px solid #f1f1f1;\n  background-color: rgba(0, 0, 0, 0.1);\n  outline: none;\n  color: #f1f1f1;\n  font-size: 14px;\n  width: 100%; }\n\n.board-form h4 > button {\n  background-color: transparent;\n  font-weight: bold;\n  font-size: 16px;\n  color: #f1f1f1;\n  border: 0;\n  outline: none; }\n"],"sourceRoot":""}]);
 
 // exports
 exports.locals = {
@@ -17499,7 +17567,7 @@ var _classCallCheck = function (instance, Constructor) { if (!(instance instance
 
 exports.__esModule = true;
 
-var _isDisposable = __webpack_require__(59);
+var _isDisposable = __webpack_require__(60);
 
 var _isDisposable2 = _interopRequireWildcard(_isDisposable);
 
@@ -17651,7 +17719,7 @@ var _classCallCheck = function (instance, Constructor) { if (!(instance instance
 
 exports.__esModule = true;
 
-var _isDisposable = __webpack_require__(59);
+var _isDisposable = __webpack_require__(60);
 
 var _isDisposable2 = _interopRequireWildcard(_isDisposable);
 
@@ -17736,7 +17804,7 @@ var _interopRequireWildcard = function (obj) { return obj && obj.__esModule ? ob
 
 exports.__esModule = true;
 
-var _isDisposable2 = __webpack_require__(59);
+var _isDisposable2 = __webpack_require__(60);
 
 var _isDisposable3 = _interopRequireWildcard(_isDisposable2);
 
@@ -17781,7 +17849,7 @@ var _reducers = __webpack_require__(219);
 
 var _reducers2 = _interopRequireDefault(_reducers);
 
-var _dragDrop = __webpack_require__(37);
+var _dragDrop = __webpack_require__(38);
 
 var dragDropActions = _interopRequireWildcard(_dragDrop);
 
@@ -18220,7 +18288,7 @@ var _asap = __webpack_require__(174);
 
 var _asap2 = _interopRequireDefault(_asap);
 
-var _registry = __webpack_require__(38);
+var _registry = __webpack_require__(39);
 
 var _getNextUniqueId = __webpack_require__(222);
 
@@ -18579,9 +18647,9 @@ var _without = __webpack_require__(120);
 
 var _without2 = _interopRequireDefault(_without);
 
-var _dragDrop = __webpack_require__(37);
+var _dragDrop = __webpack_require__(38);
 
-var _registry = __webpack_require__(38);
+var _registry = __webpack_require__(39);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -18704,7 +18772,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = refCount;
 
-var _registry = __webpack_require__(38);
+var _registry = __webpack_require__(39);
 
 function refCount() {
 	var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
@@ -19576,7 +19644,7 @@ var freeGlobal = typeof global == 'object' && global && global.Object === Object
 
 /* harmony default export */ __webpack_exports__["a"] = (freeGlobal);
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(36)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(37)))
 
 /***/ }),
 /* 240 */
@@ -19830,8 +19898,8 @@ module.exports = ListCache;
 /* 248 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getNative = __webpack_require__(45),
-    root = __webpack_require__(28);
+var getNative = __webpack_require__(46),
+    root = __webpack_require__(29);
 
 /* Built-in method references that are verified to be native. */
 var Map = getNative(root, 'Map');
@@ -19843,8 +19911,8 @@ module.exports = Map;
 /* 249 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getNative = __webpack_require__(45),
-    root = __webpack_require__(28);
+var getNative = __webpack_require__(46),
+    root = __webpack_require__(29);
 
 /* Built-in method references that are verified to be native. */
 var Set = getNative(root, 'Set');
@@ -19969,7 +20037,7 @@ module.exports = arrayPush;
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseAssignValue = __webpack_require__(107),
-    eq = __webpack_require__(47);
+    eq = __webpack_require__(48);
 
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
@@ -20058,12 +20126,12 @@ module.exports = baseIndexOf;
 /* 256 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var SetCache = __webpack_require__(61),
-    arrayIncludes = __webpack_require__(63),
-    arrayIncludesWith = __webpack_require__(64),
-    arrayMap = __webpack_require__(65),
-    baseUnary = __webpack_require__(66),
-    cacheHas = __webpack_require__(67);
+var SetCache = __webpack_require__(62),
+    arrayIncludes = __webpack_require__(64),
+    arrayIncludesWith = __webpack_require__(65),
+    arrayMap = __webpack_require__(66),
+    baseUnary = __webpack_require__(67),
+    cacheHas = __webpack_require__(68);
 
 /* Built-in method references for those with the same name as other `lodash` methods. */
 var nativeMin = Math.min;
@@ -20138,8 +20206,8 @@ module.exports = baseIntersection;
 /* 257 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseGetTag = __webpack_require__(43),
-    isObjectLike = __webpack_require__(30);
+var baseGetTag = __webpack_require__(44),
+    isObjectLike = __webpack_require__(31);
 
 /** `Object#toString` result references. */
 var argsTag = '[object Arguments]';
@@ -20182,7 +20250,7 @@ module.exports = baseIsNaN;
 
 var isFunction = __webpack_require__(117),
     isMasked = __webpack_require__(282),
-    isObject = __webpack_require__(29),
+    isObject = __webpack_require__(30),
     toSource = __webpack_require__(304);
 
 /**
@@ -20233,9 +20301,9 @@ module.exports = baseIsNative;
 /* 260 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseGetTag = __webpack_require__(43),
+var baseGetTag = __webpack_require__(44),
     isLength = __webpack_require__(118),
-    isObjectLike = __webpack_require__(30);
+    isObjectLike = __webpack_require__(31);
 
 /** `Object#toString` result references. */
 var argsTag = '[object Arguments]',
@@ -20299,7 +20367,7 @@ module.exports = baseIsTypedArray;
 /* 261 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isObject = __webpack_require__(29),
+var isObject = __webpack_require__(30),
     isPrototype = __webpack_require__(283),
     nativeKeysIn = __webpack_require__(294);
 
@@ -20434,7 +20502,7 @@ module.exports = baseXor;
 /* 265 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isArrayLikeObject = __webpack_require__(48);
+var isArrayLikeObject = __webpack_require__(49);
 
 /**
  * Casts `value` to an empty array if it's not an array like object.
@@ -20500,7 +20568,7 @@ module.exports = copyObject;
 /* 267 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var root = __webpack_require__(28);
+var root = __webpack_require__(29);
 
 /** Used to detect overreaching core-js shims. */
 var coreJsData = root['__core-js_shared__'];
@@ -20512,7 +20580,7 @@ module.exports = coreJsData;
 /* 268 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseRest = __webpack_require__(23),
+var baseRest = __webpack_require__(24),
     isIterateeCall = __webpack_require__(280);
 
 /**
@@ -20580,7 +20648,7 @@ module.exports = createSet;
 /* 270 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var eq = __webpack_require__(47);
+var eq = __webpack_require__(48);
 
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
@@ -20627,7 +20695,7 @@ module.exports = getPrototype;
 /* 272 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Symbol = __webpack_require__(62);
+var Symbol = __webpack_require__(63);
 
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
@@ -20698,7 +20766,7 @@ module.exports = getValue;
 /* 274 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var nativeCreate = __webpack_require__(46);
+var nativeCreate = __webpack_require__(47);
 
 /**
  * Removes all key-value entries from the hash.
@@ -20742,7 +20810,7 @@ module.exports = hashDelete;
 /* 276 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var nativeCreate = __webpack_require__(46);
+var nativeCreate = __webpack_require__(47);
 
 /** Used to stand-in for `undefined` hash values. */
 var HASH_UNDEFINED = '__lodash_hash_undefined__';
@@ -20778,7 +20846,7 @@ module.exports = hashGet;
 /* 277 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var nativeCreate = __webpack_require__(46);
+var nativeCreate = __webpack_require__(47);
 
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
@@ -20807,7 +20875,7 @@ module.exports = hashHas;
 /* 278 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var nativeCreate = __webpack_require__(46);
+var nativeCreate = __webpack_require__(47);
 
 /** Used to stand-in for `undefined` hash values. */
 var HASH_UNDEFINED = '__lodash_hash_undefined__';
@@ -20836,7 +20904,7 @@ module.exports = hashSet;
 /* 279 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Symbol = __webpack_require__(62),
+var Symbol = __webpack_require__(63),
     isArguments = __webpack_require__(116),
     isArray = __webpack_require__(19);
 
@@ -20862,10 +20930,10 @@ module.exports = isFlattenable;
 /* 280 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var eq = __webpack_require__(47),
-    isArrayLike = __webpack_require__(68),
+var eq = __webpack_require__(48),
+    isArrayLike = __webpack_require__(69),
     isIndex = __webpack_require__(113),
-    isObject = __webpack_require__(29);
+    isObject = __webpack_require__(30);
 
 /**
  * Checks if the given arguments are from an iteratee call.
@@ -20988,7 +21056,7 @@ module.exports = listCacheClear;
 /* 285 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var assocIndexOf = __webpack_require__(42);
+var assocIndexOf = __webpack_require__(43);
 
 /** Used for built-in method references. */
 var arrayProto = Array.prototype;
@@ -21029,7 +21097,7 @@ module.exports = listCacheDelete;
 /* 286 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var assocIndexOf = __webpack_require__(42);
+var assocIndexOf = __webpack_require__(43);
 
 /**
  * Gets the list cache value for `key`.
@@ -21054,7 +21122,7 @@ module.exports = listCacheGet;
 /* 287 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var assocIndexOf = __webpack_require__(42);
+var assocIndexOf = __webpack_require__(43);
 
 /**
  * Checks if a list cache value for `key` exists.
@@ -21076,7 +21144,7 @@ module.exports = listCacheHas;
 /* 288 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var assocIndexOf = __webpack_require__(42);
+var assocIndexOf = __webpack_require__(43);
 
 /**
  * Sets the list cache `key` to `value`.
@@ -21135,7 +21203,7 @@ module.exports = mapCacheClear;
 /* 290 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getMapData = __webpack_require__(44);
+var getMapData = __webpack_require__(45);
 
 /**
  * Removes `key` and its value from the map.
@@ -21159,7 +21227,7 @@ module.exports = mapCacheDelete;
 /* 291 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getMapData = __webpack_require__(44);
+var getMapData = __webpack_require__(45);
 
 /**
  * Gets the map value for `key`.
@@ -21181,7 +21249,7 @@ module.exports = mapCacheGet;
 /* 292 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getMapData = __webpack_require__(44);
+var getMapData = __webpack_require__(45);
 
 /**
  * Checks if a map value for `key` exists.
@@ -21203,7 +21271,7 @@ module.exports = mapCacheHas;
 /* 293 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getMapData = __webpack_require__(44);
+var getMapData = __webpack_require__(45);
 
 /**
  * Sets the map `key` to `value`.
@@ -21624,7 +21692,7 @@ module.exports = constant;
 
 var apply = __webpack_require__(106),
     assignInWith = __webpack_require__(305),
-    baseRest = __webpack_require__(23),
+    baseRest = __webpack_require__(24),
     customDefaultsAssignIn = __webpack_require__(270);
 
 /**
@@ -21660,9 +21728,9 @@ module.exports = defaults;
 /* 308 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var arrayMap = __webpack_require__(65),
+var arrayMap = __webpack_require__(66),
     baseIntersection = __webpack_require__(256),
-    baseRest = __webpack_require__(23),
+    baseRest = __webpack_require__(24),
     castArrayLikeObject = __webpack_require__(265);
 
 /**
@@ -21696,7 +21764,7 @@ module.exports = intersection;
 /* 309 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(module) {var root = __webpack_require__(28),
+/* WEBPACK VAR INJECTION */(function(module) {var root = __webpack_require__(29),
     stubFalse = __webpack_require__(313);
 
 /** Detect free variable `exports`. */
@@ -21742,7 +21810,7 @@ module.exports = isBuffer;
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseIsTypedArray = __webpack_require__(260),
-    baseUnary = __webpack_require__(66),
+    baseUnary = __webpack_require__(67),
     nodeUtil = __webpack_require__(295);
 
 /* Node.js helper references. */
@@ -21776,7 +21844,7 @@ module.exports = isTypedArray;
 
 var arrayLikeKeys = __webpack_require__(251),
     baseKeysIn = __webpack_require__(261),
-    isArrayLike = __webpack_require__(68);
+    isArrayLike = __webpack_require__(69);
 
 /**
  * Creates an array of the own and inherited enumerable property names of `object`.
@@ -21916,9 +21984,9 @@ module.exports = stubFalse;
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseFlatten = __webpack_require__(109),
-    baseRest = __webpack_require__(23),
+    baseRest = __webpack_require__(24),
     baseUniq = __webpack_require__(110),
-    isArrayLikeObject = __webpack_require__(48);
+    isArrayLikeObject = __webpack_require__(49);
 
 /**
  * Creates an array of unique values, in order, from all given arrays using
@@ -21948,9 +22016,9 @@ module.exports = union;
 /***/ (function(module, exports, __webpack_require__) {
 
 var arrayFilter = __webpack_require__(250),
-    baseRest = __webpack_require__(23),
+    baseRest = __webpack_require__(24),
     baseXor = __webpack_require__(264),
-    isArrayLikeObject = __webpack_require__(48);
+    isArrayLikeObject = __webpack_require__(49);
 
 /**
  * Creates an array of unique values that is the
@@ -21996,7 +22064,7 @@ module.exports = xor;
 if (process.env.NODE_ENV !== 'production') {
   var invariant = __webpack_require__(1);
   var warning = __webpack_require__(2);
-  var ReactPropTypesSecret = __webpack_require__(69);
+  var ReactPropTypesSecret = __webpack_require__(70);
   var loggedTypeFailures = {};
 }
 
@@ -22064,7 +22132,7 @@ module.exports = checkPropTypes;
 
 var emptyFunction = __webpack_require__(11);
 var invariant = __webpack_require__(1);
-var ReactPropTypesSecret = __webpack_require__(69);
+var ReactPropTypesSecret = __webpack_require__(70);
 
 module.exports = function() {
   function shim(props, propName, componentName, location, propFullName, secret) {
@@ -22212,7 +22280,7 @@ var _OffsetUtils = __webpack_require__(322);
 
 var _NativeDragSources = __webpack_require__(321);
 
-var _NativeTypes = __webpack_require__(70);
+var _NativeTypes = __webpack_require__(71);
 
 var NativeTypes = _interopRequireWildcard(_NativeTypes);
 
@@ -23008,7 +23076,7 @@ var _nativeTypesConfig;
 exports.createNativeDragSource = createNativeDragSource;
 exports.matchNativeItemType = matchNativeItemType;
 
-var _NativeTypes = __webpack_require__(70);
+var _NativeTypes = __webpack_require__(71);
 
 var NativeTypes = _interopRequireWildcard(_NativeTypes);
 
@@ -23278,7 +23346,7 @@ var _getEmptyImage = __webpack_require__(323);
 
 var _getEmptyImage2 = _interopRequireDefault(_getEmptyImage);
 
-var _NativeTypes = __webpack_require__(70);
+var _NativeTypes = __webpack_require__(71);
 
 var NativeTypes = _interopRequireWildcard(_NativeTypes);
 
@@ -23458,7 +23526,7 @@ var _propTypes = __webpack_require__(9);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _hoistNonReactStatics = __webpack_require__(40);
+var _hoistNonReactStatics = __webpack_require__(41);
 
 var _hoistNonReactStatics2 = _interopRequireDefault(_hoistNonReactStatics);
 
@@ -23470,7 +23538,7 @@ var _invariant = __webpack_require__(8);
 
 var _invariant2 = _interopRequireDefault(_invariant);
 
-var _shallowEqual = __webpack_require__(72);
+var _shallowEqual = __webpack_require__(73);
 
 var _shallowEqual2 = _interopRequireDefault(_shallowEqual);
 
@@ -23478,7 +23546,7 @@ var _shallowEqualScalar = __webpack_require__(128);
 
 var _shallowEqualScalar2 = _interopRequireDefault(_shallowEqualScalar);
 
-var _checkDecoratorArguments = __webpack_require__(49);
+var _checkDecoratorArguments = __webpack_require__(50);
 
 var _checkDecoratorArguments2 = _interopRequireDefault(_checkDecoratorArguments);
 
@@ -23615,7 +23683,7 @@ var _isPlainObject = __webpack_require__(20);
 
 var _isPlainObject2 = _interopRequireDefault(_isPlainObject);
 
-var _checkDecoratorArguments = __webpack_require__(49);
+var _checkDecoratorArguments = __webpack_require__(50);
 
 var _checkDecoratorArguments2 = _interopRequireDefault(_checkDecoratorArguments);
 
@@ -23699,7 +23767,7 @@ var _isPlainObject = __webpack_require__(20);
 
 var _isPlainObject2 = _interopRequireDefault(_isPlainObject);
 
-var _checkDecoratorArguments = __webpack_require__(49);
+var _checkDecoratorArguments = __webpack_require__(50);
 
 var _checkDecoratorArguments2 = _interopRequireDefault(_checkDecoratorArguments);
 
@@ -24573,7 +24641,7 @@ module.exports = AutoFocusUtils;
 
 
 
-var EventPropagators = __webpack_require__(32);
+var EventPropagators = __webpack_require__(33);
 var ExecutionEnvironment = __webpack_require__(7);
 var FallbackCompositionState = __webpack_require__(347);
 var SyntheticCompositionEvent = __webpack_require__(390);
@@ -25183,16 +25251,16 @@ module.exports = CSSPropertyOperations;
 
 
 
-var EventPluginHub = __webpack_require__(31);
-var EventPropagators = __webpack_require__(32);
+var EventPluginHub = __webpack_require__(32);
+var EventPropagators = __webpack_require__(33);
 var ExecutionEnvironment = __webpack_require__(7);
 var ReactDOMComponentTree = __webpack_require__(5);
 var ReactUpdates = __webpack_require__(13);
 var SyntheticEvent = __webpack_require__(16);
 
 var inputValueTracking = __webpack_require__(147);
-var getEventTarget = __webpack_require__(84);
-var isEventSupported = __webpack_require__(85);
+var getEventTarget = __webpack_require__(85);
+var isEventSupported = __webpack_require__(86);
 var isTextInputElement = __webpack_require__(149);
 
 var eventTypes = {
@@ -25502,7 +25570,7 @@ module.exports = ChangeEventPlugin;
 
 var _prodInvariant = __webpack_require__(3);
 
-var DOMLazyTree = __webpack_require__(24);
+var DOMLazyTree = __webpack_require__(25);
 var ExecutionEnvironment = __webpack_require__(7);
 
 var createNodesFromMarkup = __webpack_require__(227);
@@ -25583,9 +25651,9 @@ module.exports = DefaultEventPluginOrder;
 
 
 
-var EventPropagators = __webpack_require__(32);
+var EventPropagators = __webpack_require__(33);
 var ReactDOMComponentTree = __webpack_require__(5);
-var SyntheticMouseEvent = __webpack_require__(52);
+var SyntheticMouseEvent = __webpack_require__(53);
 
 var eventTypes = {
   mouseEnter: {
@@ -26027,11 +26095,11 @@ module.exports = HTMLDOMPropertyConfig;
 
 
 
-var ReactReconciler = __webpack_require__(25);
+var ReactReconciler = __webpack_require__(26);
 
 var instantiateReactComponent = __webpack_require__(148);
-var KeyEscapeUtils = __webpack_require__(76);
-var shouldUpdateReactComponent = __webpack_require__(86);
+var KeyEscapeUtils = __webpack_require__(77);
+var shouldUpdateReactComponent = __webpack_require__(87);
 var traverseAllChildren = __webpack_require__(151);
 var warning = __webpack_require__(2);
 
@@ -26186,7 +26254,7 @@ module.exports = ReactChildReconciler;
 
 
 
-var DOMChildrenOperations = __webpack_require__(73);
+var DOMChildrenOperations = __webpack_require__(74);
 var ReactDOMIDOperations = __webpack_require__(357);
 
 /**
@@ -26222,23 +26290,23 @@ module.exports = ReactComponentBrowserEnvironment;
 var _prodInvariant = __webpack_require__(3),
     _assign = __webpack_require__(4);
 
-var React = __webpack_require__(26);
-var ReactComponentEnvironment = __webpack_require__(78);
+var React = __webpack_require__(27);
+var ReactComponentEnvironment = __webpack_require__(79);
 var ReactCurrentOwner = __webpack_require__(14);
-var ReactErrorUtils = __webpack_require__(79);
-var ReactInstanceMap = __webpack_require__(33);
+var ReactErrorUtils = __webpack_require__(80);
+var ReactInstanceMap = __webpack_require__(34);
 var ReactInstrumentation = __webpack_require__(12);
 var ReactNodeTypes = __webpack_require__(140);
-var ReactReconciler = __webpack_require__(25);
+var ReactReconciler = __webpack_require__(26);
 
 if (process.env.NODE_ENV !== 'production') {
   var checkReactTypeSpec = __webpack_require__(399);
 }
 
-var emptyObject = __webpack_require__(39);
+var emptyObject = __webpack_require__(40);
 var invariant = __webpack_require__(1);
-var shallowEqual = __webpack_require__(60);
-var shouldUpdateReactComponent = __webpack_require__(86);
+var shallowEqual = __webpack_require__(61);
+var shouldUpdateReactComponent = __webpack_require__(87);
 var warning = __webpack_require__(2);
 
 var CompositeTypes = {
@@ -27130,7 +27198,7 @@ module.exports = ReactCompositeComponent;
 var ReactDOMComponentTree = __webpack_require__(5);
 var ReactDefaultInjection = __webpack_require__(369);
 var ReactMount = __webpack_require__(139);
-var ReactReconciler = __webpack_require__(25);
+var ReactReconciler = __webpack_require__(26);
 var ReactUpdates = __webpack_require__(13);
 var ReactVersion = __webpack_require__(384);
 
@@ -27249,13 +27317,13 @@ var _prodInvariant = __webpack_require__(3),
 
 var AutoFocusUtils = __webpack_require__(340);
 var CSSPropertyOperations = __webpack_require__(342);
-var DOMLazyTree = __webpack_require__(24);
-var DOMNamespaces = __webpack_require__(74);
+var DOMLazyTree = __webpack_require__(25);
+var DOMNamespaces = __webpack_require__(75);
 var DOMProperty = __webpack_require__(18);
 var DOMPropertyOperations = __webpack_require__(132);
-var EventPluginHub = __webpack_require__(31);
-var EventPluginRegistry = __webpack_require__(50);
-var ReactBrowserEventEmitter = __webpack_require__(51);
+var EventPluginHub = __webpack_require__(32);
+var EventPluginRegistry = __webpack_require__(51);
+var ReactBrowserEventEmitter = __webpack_require__(52);
 var ReactDOMComponentFlags = __webpack_require__(133);
 var ReactDOMComponentTree = __webpack_require__(5);
 var ReactDOMInput = __webpack_require__(358);
@@ -27267,12 +27335,12 @@ var ReactMultiChild = __webpack_require__(377);
 var ReactServerRenderingTransaction = __webpack_require__(382);
 
 var emptyFunction = __webpack_require__(11);
-var escapeTextContentForBrowser = __webpack_require__(54);
+var escapeTextContentForBrowser = __webpack_require__(55);
 var invariant = __webpack_require__(1);
-var isEventSupported = __webpack_require__(85);
-var shallowEqual = __webpack_require__(60);
+var isEventSupported = __webpack_require__(86);
+var shallowEqual = __webpack_require__(61);
 var inputValueTracking = __webpack_require__(147);
-var validateDOMNesting = __webpack_require__(87);
+var validateDOMNesting = __webpack_require__(88);
 var warning = __webpack_require__(2);
 
 var Flags = ReactDOMComponentFlags;
@@ -28258,7 +28326,7 @@ module.exports = ReactDOMComponent;
 
 
 
-var validateDOMNesting = __webpack_require__(87);
+var validateDOMNesting = __webpack_require__(88);
 
 var DOC_NODE_TYPE = 9;
 
@@ -28299,7 +28367,7 @@ module.exports = ReactDOMContainerInfo;
 
 var _assign = __webpack_require__(4);
 
-var DOMLazyTree = __webpack_require__(24);
+var DOMLazyTree = __webpack_require__(25);
 var ReactDOMComponentTree = __webpack_require__(5);
 
 var ReactDOMEmptyComponent = function (instantiate) {
@@ -28386,7 +28454,7 @@ module.exports = ReactDOMFeatureFlags;
 
 
 
-var DOMChildrenOperations = __webpack_require__(73);
+var DOMChildrenOperations = __webpack_require__(74);
 var ReactDOMComponentTree = __webpack_require__(5);
 
 /**
@@ -28428,7 +28496,7 @@ var _prodInvariant = __webpack_require__(3),
     _assign = __webpack_require__(4);
 
 var DOMPropertyOperations = __webpack_require__(132);
-var LinkedValueUtils = __webpack_require__(77);
+var LinkedValueUtils = __webpack_require__(78);
 var ReactDOMComponentTree = __webpack_require__(5);
 var ReactUpdates = __webpack_require__(13);
 
@@ -28867,7 +28935,7 @@ module.exports = ReactDOMNullInputValuePropHook;
 
 var _assign = __webpack_require__(4);
 
-var React = __webpack_require__(26);
+var React = __webpack_require__(27);
 var ReactDOMComponentTree = __webpack_require__(5);
 var ReactDOMSelect = __webpack_require__(134);
 
@@ -29213,13 +29281,13 @@ module.exports = ReactDOMSelection;
 var _prodInvariant = __webpack_require__(3),
     _assign = __webpack_require__(4);
 
-var DOMChildrenOperations = __webpack_require__(73);
-var DOMLazyTree = __webpack_require__(24);
+var DOMChildrenOperations = __webpack_require__(74);
+var DOMLazyTree = __webpack_require__(25);
 var ReactDOMComponentTree = __webpack_require__(5);
 
-var escapeTextContentForBrowser = __webpack_require__(54);
+var escapeTextContentForBrowser = __webpack_require__(55);
 var invariant = __webpack_require__(1);
-var validateDOMNesting = __webpack_require__(87);
+var validateDOMNesting = __webpack_require__(88);
 
 /**
  * Text nodes violate a couple assumptions that React makes about components:
@@ -29381,7 +29449,7 @@ module.exports = ReactDOMTextComponent;
 var _prodInvariant = __webpack_require__(3),
     _assign = __webpack_require__(4);
 
-var LinkedValueUtils = __webpack_require__(77);
+var LinkedValueUtils = __webpack_require__(78);
 var ReactDOMComponentTree = __webpack_require__(5);
 var ReactUpdates = __webpack_require__(13);
 
@@ -29687,7 +29755,7 @@ module.exports = {
 
 
 var DOMProperty = __webpack_require__(18);
-var EventPluginRegistry = __webpack_require__(50);
+var EventPluginRegistry = __webpack_require__(51);
 var ReactComponentTreeHook = __webpack_require__(10);
 
 var warning = __webpack_require__(2);
@@ -30174,7 +30242,7 @@ module.exports = ReactDebugTool;
 var _assign = __webpack_require__(4);
 
 var ReactUpdates = __webpack_require__(13);
-var Transaction = __webpack_require__(53);
+var Transaction = __webpack_require__(54);
 
 var emptyFunction = __webpack_require__(11);
 
@@ -30360,7 +30428,7 @@ module.exports = REACT_ELEMENT_TYPE;
 
 
 
-var EventPluginHub = __webpack_require__(31);
+var EventPluginHub = __webpack_require__(32);
 
 function runEventQueueInBatch(events) {
   EventPluginHub.enqueueEvents(events);
@@ -30405,7 +30473,7 @@ var PooledClass = __webpack_require__(21);
 var ReactDOMComponentTree = __webpack_require__(5);
 var ReactUpdates = __webpack_require__(13);
 
-var getEventTarget = __webpack_require__(84);
+var getEventTarget = __webpack_require__(85);
 var getUnboundedScrollPosition = __webpack_require__(229);
 
 /**
@@ -30597,11 +30665,11 @@ module.exports = ReactHostOperationHistoryHook;
 
 
 var DOMProperty = __webpack_require__(18);
-var EventPluginHub = __webpack_require__(31);
-var EventPluginUtils = __webpack_require__(75);
-var ReactComponentEnvironment = __webpack_require__(78);
+var EventPluginHub = __webpack_require__(32);
+var EventPluginUtils = __webpack_require__(76);
+var ReactComponentEnvironment = __webpack_require__(79);
 var ReactEmptyComponent = __webpack_require__(135);
-var ReactBrowserEventEmitter = __webpack_require__(51);
+var ReactBrowserEventEmitter = __webpack_require__(52);
 var ReactHostComponent = __webpack_require__(137);
 var ReactUpdates = __webpack_require__(13);
 
@@ -30735,12 +30803,12 @@ module.exports = ReactMarkupChecksum;
 
 var _prodInvariant = __webpack_require__(3);
 
-var ReactComponentEnvironment = __webpack_require__(78);
-var ReactInstanceMap = __webpack_require__(33);
+var ReactComponentEnvironment = __webpack_require__(79);
+var ReactInstanceMap = __webpack_require__(34);
 var ReactInstrumentation = __webpack_require__(12);
 
 var ReactCurrentOwner = __webpack_require__(14);
-var ReactReconciler = __webpack_require__(25);
+var ReactReconciler = __webpack_require__(26);
 var ReactChildReconciler = __webpack_require__(349);
 
 var emptyFunction = __webpack_require__(11);
@@ -31319,11 +31387,11 @@ var _assign = __webpack_require__(4);
 
 var CallbackQueue = __webpack_require__(131);
 var PooledClass = __webpack_require__(21);
-var ReactBrowserEventEmitter = __webpack_require__(51);
+var ReactBrowserEventEmitter = __webpack_require__(52);
 var ReactInputSelection = __webpack_require__(138);
 var ReactInstrumentation = __webpack_require__(12);
-var Transaction = __webpack_require__(53);
-var ReactUpdateQueue = __webpack_require__(80);
+var Transaction = __webpack_require__(54);
+var ReactUpdateQueue = __webpack_require__(81);
 
 /**
  * Ensures that, when possible, the selection range (currently selected text
@@ -31596,7 +31664,7 @@ module.exports = ReactRef;
 var _assign = __webpack_require__(4);
 
 var PooledClass = __webpack_require__(21);
-var Transaction = __webpack_require__(53);
+var Transaction = __webpack_require__(54);
 var ReactInstrumentation = __webpack_require__(12);
 var ReactServerUpdateQueue = __webpack_require__(383);
 
@@ -31692,7 +31760,7 @@ module.exports = ReactServerRenderingTransaction;
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var ReactUpdateQueue = __webpack_require__(80);
+var ReactUpdateQueue = __webpack_require__(81);
 
 var warning = __webpack_require__(2);
 
@@ -32160,7 +32228,7 @@ module.exports = SVGDOMPropertyConfig;
 
 
 
-var EventPropagators = __webpack_require__(32);
+var EventPropagators = __webpack_require__(33);
 var ExecutionEnvironment = __webpack_require__(7);
 var ReactDOMComponentTree = __webpack_require__(5);
 var ReactInputSelection = __webpack_require__(138);
@@ -32168,7 +32236,7 @@ var SyntheticEvent = __webpack_require__(16);
 
 var getActiveElement = __webpack_require__(103);
 var isTextInputElement = __webpack_require__(149);
-var shallowEqual = __webpack_require__(60);
+var shallowEqual = __webpack_require__(61);
 
 var skipSelectionChangeEvent = ExecutionEnvironment.canUseDOM && 'documentMode' in document && document.documentMode <= 11;
 
@@ -32357,22 +32425,22 @@ module.exports = SelectEventPlugin;
 var _prodInvariant = __webpack_require__(3);
 
 var EventListener = __webpack_require__(101);
-var EventPropagators = __webpack_require__(32);
+var EventPropagators = __webpack_require__(33);
 var ReactDOMComponentTree = __webpack_require__(5);
 var SyntheticAnimationEvent = __webpack_require__(388);
 var SyntheticClipboardEvent = __webpack_require__(389);
 var SyntheticEvent = __webpack_require__(16);
 var SyntheticFocusEvent = __webpack_require__(392);
 var SyntheticKeyboardEvent = __webpack_require__(394);
-var SyntheticMouseEvent = __webpack_require__(52);
+var SyntheticMouseEvent = __webpack_require__(53);
 var SyntheticDragEvent = __webpack_require__(391);
 var SyntheticTouchEvent = __webpack_require__(395);
 var SyntheticTransitionEvent = __webpack_require__(396);
-var SyntheticUIEvent = __webpack_require__(34);
+var SyntheticUIEvent = __webpack_require__(35);
 var SyntheticWheelEvent = __webpack_require__(397);
 
 var emptyFunction = __webpack_require__(11);
-var getEventCharCode = __webpack_require__(82);
+var getEventCharCode = __webpack_require__(83);
 var invariant = __webpack_require__(1);
 
 /**
@@ -32713,7 +32781,7 @@ module.exports = SyntheticCompositionEvent;
 
 
 
-var SyntheticMouseEvent = __webpack_require__(52);
+var SyntheticMouseEvent = __webpack_require__(53);
 
 /**
  * @interface DragEvent
@@ -32754,7 +32822,7 @@ module.exports = SyntheticDragEvent;
 
 
 
-var SyntheticUIEvent = __webpack_require__(34);
+var SyntheticUIEvent = __webpack_require__(35);
 
 /**
  * @interface FocusEvent
@@ -32837,11 +32905,11 @@ module.exports = SyntheticInputEvent;
 
 
 
-var SyntheticUIEvent = __webpack_require__(34);
+var SyntheticUIEvent = __webpack_require__(35);
 
-var getEventCharCode = __webpack_require__(82);
+var getEventCharCode = __webpack_require__(83);
 var getEventKey = __webpack_require__(403);
-var getEventModifierState = __webpack_require__(83);
+var getEventModifierState = __webpack_require__(84);
 
 /**
  * @interface KeyboardEvent
@@ -32926,9 +32994,9 @@ module.exports = SyntheticKeyboardEvent;
 
 
 
-var SyntheticUIEvent = __webpack_require__(34);
+var SyntheticUIEvent = __webpack_require__(35);
 
-var getEventModifierState = __webpack_require__(83);
+var getEventModifierState = __webpack_require__(84);
 
 /**
  * @interface TouchEvent
@@ -33020,7 +33088,7 @@ module.exports = SyntheticTransitionEvent;
 
 
 
-var SyntheticMouseEvent = __webpack_require__(52);
+var SyntheticMouseEvent = __webpack_require__(53);
 
 /**
  * @interface WheelEvent
@@ -33307,7 +33375,7 @@ var _prodInvariant = __webpack_require__(3);
 
 var ReactCurrentOwner = __webpack_require__(14);
 var ReactDOMComponentTree = __webpack_require__(5);
-var ReactInstanceMap = __webpack_require__(33);
+var ReactInstanceMap = __webpack_require__(34);
 
 var getHostComponentFromComposite = __webpack_require__(145);
 var invariant = __webpack_require__(1);
@@ -33370,7 +33438,7 @@ module.exports = findDOMNode;
 
 
 
-var KeyEscapeUtils = __webpack_require__(76);
+var KeyEscapeUtils = __webpack_require__(77);
 var traverseAllChildren = __webpack_require__(151);
 var warning = __webpack_require__(2);
 
@@ -33451,7 +33519,7 @@ module.exports = flattenChildren;
 
 
 
-var getEventCharCode = __webpack_require__(82);
+var getEventCharCode = __webpack_require__(83);
 
 /**
  * Normalization of deprecated HTML5 `key` values
@@ -33799,7 +33867,7 @@ module.exports = getVendorPrefixedEventName;
 
 
 
-var escapeTextContentForBrowser = __webpack_require__(54);
+var escapeTextContentForBrowser = __webpack_require__(55);
 
 /**
  * Escapes attribute value to prevent scripting attacks.
@@ -33845,7 +33913,7 @@ module.exports = ReactMount.renderSubtreeIntoContainer;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils_PropTypes__ = __webpack_require__(154);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_warning__ = __webpack_require__(88);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_warning__ = __webpack_require__(89);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -34045,7 +34113,7 @@ function createConnect() {
 /* unused harmony export whenMapDispatchToPropsIsFunction */
 /* unused harmony export whenMapDispatchToPropsIsMissing */
 /* unused harmony export whenMapDispatchToPropsIsObject */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_redux__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_redux__ = __webpack_require__(59);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__wrapMapToProps__ = __webpack_require__(153);
 
 
@@ -34266,7 +34334,7 @@ function finalPropsSelectorFactory(dispatch, _ref2) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = verifySubselectors;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_warning__ = __webpack_require__(88);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_warning__ = __webpack_require__(89);
 
 
 function verify(selector, methodName, displayName) {
@@ -34500,7 +34568,7 @@ module.exports = KeyEscapeUtils;
 
 
 
-var _prodInvariant = __webpack_require__(27);
+var _prodInvariant = __webpack_require__(28);
 
 var invariant = __webpack_require__(1);
 
@@ -35084,7 +35152,7 @@ module.exports = '15.6.1';
 
 
 
-var _prodInvariant = __webpack_require__(27);
+var _prodInvariant = __webpack_require__(28);
 
 var ReactPropTypeLocationNames = __webpack_require__(422);
 var ReactPropTypesSecret = __webpack_require__(424);
@@ -35230,7 +35298,7 @@ module.exports = getNextDebugID;
  */
 
 
-var _prodInvariant = __webpack_require__(27);
+var _prodInvariant = __webpack_require__(28);
 
 var ReactElement = __webpack_require__(22);
 
@@ -35275,7 +35343,7 @@ module.exports = onlyChild;
 
 
 
-var _prodInvariant = __webpack_require__(27);
+var _prodInvariant = __webpack_require__(28);
 
 var ReactCurrentOwner = __webpack_require__(14);
 var REACT_ELEMENT_TYPE = __webpack_require__(157);
@@ -35446,7 +35514,7 @@ module.exports = traverseAllChildren;
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = autoRehydrate;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__constants__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__constants__ = __webpack_require__(36);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__utils_isStatePlainEnough__ = __webpack_require__(434);
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
@@ -35562,7 +35630,7 @@ function createTransform(inbound, outbound) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/* harmony export (immutable) */ __webpack_exports__["a"] = persistStore;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__constants__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__constants__ = __webpack_require__(36);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getStoredState__ = __webpack_require__(163);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__createPersistor__ = __webpack_require__(161);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_setImmediate__ = __webpack_require__(165);
@@ -35641,7 +35709,7 @@ function rehydrateAction(payload) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = isStatePlainEnough;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_es_isPlainObject__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_es_isPlainObject__ = __webpack_require__(42);
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 
@@ -35772,7 +35840,7 @@ function bindActionCreators(actionCreators, dispatch) {
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/* harmony export (immutable) */ __webpack_exports__["a"] = combineReducers;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__createStore__ = __webpack_require__(167);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash_es_isPlainObject__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_lodash_es_isPlainObject__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils_warning__ = __webpack_require__(168);
 
 
@@ -36581,7 +36649,7 @@ if (typeof self !== 'undefined') {
 
 var result = (0, _ponyfill2['default'])(root);
 exports['default'] = result;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(36), __webpack_require__(91)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(37), __webpack_require__(91)(module)))
 
 /***/ }),
 /* 450 */
