@@ -34,7 +34,7 @@ export const Board = ({ name, id, editMode, onFieldNameBlur, onClickName, isOver
   <div className={getClassNames(isOver)} >
     <BoardForm
       editMode={editMode}
-      id={uid()}
+      id={id}
       name={name}
       onFieldNameBlur={onFieldNameBlur}
       onClickName={onClickName}
