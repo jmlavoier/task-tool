@@ -15537,7 +15537,7 @@ var Board = exports.Board = function Board(_ref) {
     { className: getClassNames(isOver) },
     _react2.default.createElement(_BoardForm2.default, {
       editMode: editMode,
-      id: (0, _uid2.default)(),
+      id: id,
       name: name,
       onFieldNameBlur: onFieldNameBlur,
       onClickName: onClickName
