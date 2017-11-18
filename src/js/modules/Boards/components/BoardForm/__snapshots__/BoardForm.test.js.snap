@@ -1,5 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Should component calls onClickName prop on click 1`] = `
+<div
+  className="board-form"
+>
+  <h4>
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      Testing
+    </button>
+  </h4>
+</div>
+`;
+
 exports[`Should component render input on edit mode 1`] = `
 <div
   className="board-form"
