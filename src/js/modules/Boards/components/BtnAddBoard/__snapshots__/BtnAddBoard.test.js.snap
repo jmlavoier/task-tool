@@ -1,8 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should component render with default props 1`] = `
+exports[`Should component render with default props 1`] = `
 <button
   className="btn-add-board"
+  onClick={[Function]}
 >
    + Add Board 
 </button>
