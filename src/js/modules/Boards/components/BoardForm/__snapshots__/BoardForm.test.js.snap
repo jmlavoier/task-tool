@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Should component calls onClickName prop on click 1`] = `
+exports[`Should component calls onClickName on title click 1`] = `
 <div
   className="board-form"
 >
