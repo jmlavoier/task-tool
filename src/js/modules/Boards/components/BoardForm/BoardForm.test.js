@@ -26,7 +26,7 @@ test('Should component render input on edit mode', () => {
   expect(wrapper).toMatchSnapshot();
 });
 
-test('Should component calls onClickName prop on click', () => {
+test('Should component calls onClickName on title click', () => {
   const onClickName = jest.fn();
   const id = uid();
   
@@ -41,4 +41,34 @@ test('Should component calls onClickName prop on click', () => {
   wrapper.find('button').simulate('click');
   expect(onClickName).toHaveBeenCalled();
   expect(onClickName.mock.calls[0][0]).toEqual(id);
+});
+
+test('Should component calls onFieldNameKeyup on input keypress', () => {
+  const onFieldNameBlur = jest.fn();
+  const id = uid();
+  
+  const wrapper = mount(<BoardForm
+    editMode={true}
+    id={id}
+    name="Testing"
+    onFieldNameBlur={onFieldNameBlur}
+  />);
+
+  wrapper.find('input').simulate('keyup', { keyCode: 13 });
+  expect(onFieldNameBlur).toHaveBeenCalled();
+});
+
+test('Should component doesn\'t call onFieldNameKeyup on input keypress', () => {
+  const onFieldNameBlur = jest.fn();
+  const id = uid();
+  
+  const wrapper = mount(<BoardForm
+    editMode={true}
+    id={id}
+    name="Testing"
+    onFieldNameBlur={onFieldNameBlur}
+  />);
+
+  wrapper.find('input').simulate('keyup', { keyCode: 40 });
+  expect(onFieldNameBlur).not.toHaveBeenCalled();
 });
