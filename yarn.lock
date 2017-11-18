@@ -1918,6 +1918,18 @@ enzyme-matchers@^3.4.0:
   dependencies:
     deep-equal-ident "^1.1.1"
 
+enzyme-to-json@2:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/enzyme-to-json/-/enzyme-to-json-2.0.1.tgz#e8b223040a7cc603bc678a4698c1a83c8c649932"
+  dependencies:
+    lodash.filter "^4.6.0"
+    lodash.isnil "^4.0.0"
+    lodash.isplainobject "^4.0.6"
+    lodash.omitby "^4.6.0"
+    lodash.range "^3.2.0"
+    object-values "^1.0.0"
+    object.entries "^1.0.4"
+
 enzyme-to-json@^1.5.0:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/enzyme-to-json/-/enzyme-to-json-1.5.1.tgz#e34f4d126bb3f4696ce3800b51f9ed83df708799"
@@ -3817,7 +3829,7 @@ lodash.mergewith@^4.6.0:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/lodash.mergewith/-/lodash.mergewith-4.6.0.tgz#150cf0a16791f5903b8891eab154609274bdea55"
 
-lodash.omitby@^4.5.0:
+lodash.omitby@^4.5.0, lodash.omitby@^4.6.0:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/lodash.omitby/-/lodash.omitby-4.6.0.tgz#5c15ff4754ad555016b53c041311e8f079204791"
 
