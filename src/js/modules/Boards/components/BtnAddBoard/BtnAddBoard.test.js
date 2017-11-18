@@ -1,8 +1,9 @@
-import React from 'react';
-import { shallow, mount } from 'enzyme';
+// import React from 'react';
+// import { shallow, mount } from 'enzyme';
 
-import BoardForm from 'modules/Boards/components/BtnAddBoard';
+// import BoardForm from './BoardForm';
 
-test('should component render with default props', () => {
-  
-});
+// test('should component render with default props', () => {
+//   const wrapper = shallow(<BoardForm />);
+//   expect(wrapper).toMatchSnapshot();
+// });

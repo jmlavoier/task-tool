@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should component render input on edit mode 1`] = `
+<div
+  className="board-form"
+>
+  <input
+    onBlur={[Function]}
+    onChange={[Function]}
+    onKeyUp={[Function]}
+    type="text"
+    value="Testing"
+  />
+</div>
+`;
+
+exports[`Should component render with default props 1`] = `
+<div
+  className="board-form"
+>
+  <h4>
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      Testing
+    </button>
+  </h4>
+</div>
+`;

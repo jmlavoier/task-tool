@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { DropTarget } from 'react-dnd';
 import classNames from 'classnames';
-import uid from 'uid';
 
 import BoardForm from 'modules/Boards/components/BoardForm';
 import Cards from 'modules/Cards';
