@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should component change description 1`] = `
+<CardForm
+  description="Testing"
+  id="123"
+  onSaveCard={[Function]}
+>
+  <textarea
+    className="card-form"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onKeyDown={[Function]}
+    value="Testing"
+  />
+</CardForm>
+`;
+
+exports[`Should component change description 2`] = `
+<CardForm
+  description="Testing"
+  id="123"
+  onSaveCard={[Function]}
+>
+  <textarea
+    className="card-form"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onKeyDown={[Function]}
+    value="Description changed"
+  />
+</CardForm>
+`;
+
+exports[`Should component render with default props 1`] = `
+<textarea
+  className="card-form"
+  onBlur={[Function]}
+  onChange={[Function]}
+  onKeyDown={[Function]}
+  value=""
+/>
+`;
