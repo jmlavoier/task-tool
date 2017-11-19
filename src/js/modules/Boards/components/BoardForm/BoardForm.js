@@ -4,6 +4,10 @@ import PropTypes from 'prop-types';
 import style from './BoardForm.sass';
 
 class BoardForm extends React.Component {
+  static focusElement(el) {
+    el.focus();
+  }
+
   constructor(props) {
     super(props);
     this.state = {
@@ -18,13 +22,13 @@ class BoardForm extends React.Component {
 
   componentDidMount() {
     if (this.inputName) {
-      this.inputName.focus();
+      this.constructor.focusElement(this.inputName);
     }
   }
 
   componentDidUpdate() {
     if (this.inputName) {
-      this.inputName.focus();
+      this.constructor.focusElement(this.inputName);
     }
   }
 

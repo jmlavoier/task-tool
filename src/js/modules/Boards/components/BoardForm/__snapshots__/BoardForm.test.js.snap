@@ -29,6 +29,34 @@ exports[`Should component render input on edit mode 1`] = `
 </div>
 `;
 
+exports[`Should component render value on input change 1`] = `
+<div
+  className="board-form"
+>
+  <input
+    onBlur={[Function]}
+    onChange={[Function]}
+    onKeyUp={[Function]}
+    type="text"
+    value="Testing"
+  />
+</div>
+`;
+
+exports[`Should component render value on input change 2`] = `
+<div
+  className="board-form"
+>
+  <input
+    onBlur={[Function]}
+    onChange={[Function]}
+    onKeyUp={[Function]}
+    type="text"
+    value="updated value"
+  />
+</div>
+`;
+
 exports[`Should component render with default props 1`] = `
 <div
   className="board-form"
