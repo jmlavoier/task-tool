@@ -1,0 +1,224 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should component render cards 1`] = `
+<DragDropContext(Component)
+  boardId="321"
+  cards={
+    Array [
+      Object {
+        "description": "1",
+        "editMode": false,
+        "id": "1",
+      },
+      Object {
+        "description": "2",
+        "editMode": false,
+        "id": "2",
+      },
+      Object {
+        "description": "3",
+        "editMode": false,
+        "id": "3",
+      },
+    ]
+  }
+  changeBoard={[Function]}
+  onBtnAddCardClick={[Function]}
+  onEditCard={[Function]}
+  onSaveCard={[Function]}
+>
+  <Component
+    boardId="321"
+    cards={
+      Array [
+        Object {
+          "description": "1",
+          "editMode": false,
+          "id": "1",
+        },
+        Object {
+          "description": "2",
+          "editMode": false,
+          "id": "2",
+        },
+        Object {
+          "description": "3",
+          "editMode": false,
+          "id": "3",
+        },
+      ]
+    }
+    changeBoard={[Function]}
+    onBtnAddCardClick={[Function]}
+    onEditCard={[Function]}
+    onSaveCard={[Function]}
+  >
+    <CardsList
+      boardId="321"
+      cards={
+        Array [
+          Object {
+            "description": "1",
+            "editMode": false,
+            "id": "1",
+          },
+          Object {
+            "description": "2",
+            "editMode": false,
+            "id": "2",
+          },
+          Object {
+            "description": "3",
+            "editMode": false,
+            "id": "3",
+          },
+        ]
+      }
+      changeBoard={[Function]}
+      onBtnAddCardClick={[Function]}
+      onEditCard={[Function]}
+      onSaveCard={[Function]}
+    >
+      <ul
+        className="cards-list"
+      >
+        <DragSource(Card)
+          changeBoard={[Function]}
+          description="1"
+          editMode={false}
+          id="1"
+          onEditCard={[Function]}
+          onSaveCard={[Function]}
+        >
+          <Card
+            changeBoard={[Function]}
+            connectDragSource={[Function]}
+            description="1"
+            editMode={false}
+            id="1"
+            isDragging={false}
+            onEditCard={[Function]}
+            onSaveCard={[Function]}
+          >
+            <div
+              className="card"
+              onClick={[Function]}
+              role="presentation"
+            >
+              1
+            </div>
+          </Card>
+        </DragSource(Card)>
+        <DragSource(Card)
+          changeBoard={[Function]}
+          description="2"
+          editMode={false}
+          id="2"
+          onEditCard={[Function]}
+          onSaveCard={[Function]}
+        >
+          <Card
+            changeBoard={[Function]}
+            connectDragSource={[Function]}
+            description="2"
+            editMode={false}
+            id="2"
+            isDragging={false}
+            onEditCard={[Function]}
+            onSaveCard={[Function]}
+          >
+            <div
+              className="card"
+              onClick={[Function]}
+              role="presentation"
+            >
+              2
+            </div>
+          </Card>
+        </DragSource(Card)>
+        <DragSource(Card)
+          changeBoard={[Function]}
+          description="3"
+          editMode={false}
+          id="3"
+          onEditCard={[Function]}
+          onSaveCard={[Function]}
+        >
+          <Card
+            changeBoard={[Function]}
+            connectDragSource={[Function]}
+            description="3"
+            editMode={false}
+            id="3"
+            isDragging={false}
+            onEditCard={[Function]}
+            onSaveCard={[Function]}
+          >
+            <div
+              className="card"
+              onClick={[Function]}
+              role="presentation"
+            >
+              3
+            </div>
+          </Card>
+        </DragSource(Card)>
+        <BtnAddCard
+          onClick={[Function]}
+        >
+          <button
+            className="btn-add-card"
+            onClick={[Function]}
+          >
+             + Add Card 
+          </button>
+        </BtnAddCard>
+      </ul>
+    </CardsList>
+  </Component>
+</DragDropContext(Component)>
+`;
+
+exports[`Should component render with default props 1`] = `
+<DragDropContext(Component)
+  boardId=""
+  cards={Array []}
+  changeBoard={[Function]}
+  onBtnAddCardClick={[Function]}
+  onEditCard={[Function]}
+  onSaveCard={[Function]}
+>
+  <Component
+    boardId=""
+    cards={Array []}
+    changeBoard={[Function]}
+    onBtnAddCardClick={[Function]}
+    onEditCard={[Function]}
+    onSaveCard={[Function]}
+  >
+    <CardsList
+      boardId=""
+      cards={Array []}
+      changeBoard={[Function]}
+      onBtnAddCardClick={[Function]}
+      onEditCard={[Function]}
+      onSaveCard={[Function]}
+    >
+      <ul
+        className="cards-list"
+      >
+        <BtnAddCard
+          onClick={[Function]}
+        >
+          <button
+            className="btn-add-card"
+            onClick={[Function]}
+          >
+             + Add Card 
+          </button>
+        </BtnAddCard>
+      </ul>
+    </CardsList>
+  </Component>
+</DragDropContext(Component)>
+`;

@@ -11,33 +11,44 @@ function wrapInTestContext(DecoratedComponent) {
   return DragDropContext(TestBackend)(props => <DecoratedComponent {...props} />);
 }
 
-test('Should component render with default props', () => {
-  const OriginalBox = wrapInTestContext(Card);
-  const identity = el => el;
+const OriginalBox = wrapInTestContext(Card);
+const identity = el => el;
+
+test('Should component render description', () => {
+  const id = '123'
   const description = 'Testing anything';
 
-  const wrapper = mount(<OriginalBox connectDragSource={identity} id={uid()} onSaveCard={() => {}} onEditCard={() => {}} description={description} />);
+  const wrapper = mount(<OriginalBox 
+    connectDragSource={identity} 
+    id={id} 
+    onSaveCard={() => {}} 
+    onEditCard={() => {}} 
+    editMode={false}
+    description={description} />);
   
-  expect(wrapper.text()).toBe(description);
+  expect(wrapper).toMatchSnapshot();
 });
-
-
-test('Should component render with props', () => {
-  const OriginalBox = wrapInTestContext(Card);
-  const identity = el => el;
-  const description = 'Go to somewhere';
-  
-  const wrapper = mount(<OriginalBox connectDragSource={identity} id={uid()} onSaveCard={() => {}} onEditCard={() => {}} description={description} />);
-
-  expect(wrapper.text()).toBe(description);
-});
-
 
 test('Should component render CardForm', () => {
-  const OriginalBox = wrapInTestContext(Card);
-  const identity = el => el;
-  
   const wrapper = mount(<OriginalBox connectDragSource={identity} id={uid()} editMode onSaveCard={() => {}} onEditCard={() => {}} description="" />);
 
   expect(wrapper.find(CardForm)).toHaveLength(1);
-})
+});
+
+test('Should component call onEditCard on click', () => {
+  const id = '123'
+  const description = 'Testing anything';
+  const mockOnEditCard = jest.fn();
+
+  const wrapper = mount(<OriginalBox 
+    connectDragSource={identity} 
+    id={id} 
+    onSaveCard={() => {}} 
+    onEditCard={mockOnEditCard} 
+    editMode={true}
+    description={description} />);
+
+  wrapper.simulate('click');
+  expect(mockOnEditCard).toHaveBeenCalled();
+  expect(mockOnEditCard.mock.calls[0][0]).toEqual(id);
+});
