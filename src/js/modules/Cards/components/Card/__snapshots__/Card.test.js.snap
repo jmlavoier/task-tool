@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should component render description 1`] = `
+<DragDropContext(Component)
+  connectDragSource={[Function]}
+  description="Testing anything"
+  editMode={false}
+  id="123"
+  onEditCard={[Function]}
+  onSaveCard={[Function]}
+>
+  <Component
+    connectDragSource={[Function]}
+    description="Testing anything"
+    editMode={false}
+    id="123"
+    onEditCard={[Function]}
+    onSaveCard={[Function]}
+  >
+    <DragSource(Card)
+      connectDragSource={[Function]}
+      description="Testing anything"
+      editMode={false}
+      id="123"
+      onEditCard={[Function]}
+      onSaveCard={[Function]}
+    >
+      <Card
+        connectDragSource={[Function]}
+        description="Testing anything"
+        editMode={false}
+        id="123"
+        isDragging={false}
+        onEditCard={[Function]}
+        onSaveCard={[Function]}
+      >
+        <div
+          className="card"
+          onClick={[Function]}
+          role="presentation"
+        >
+          Testing anything
+        </div>
+      </Card>
+    </DragSource(Card)>
+  </Component>
+</DragDropContext(Component)>
+`;

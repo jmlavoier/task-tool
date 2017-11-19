@@ -7,19 +7,24 @@ import CardForm from 'modules/Cards/components/CardForm';
 import style from './Card.sass';
 
 const cardSource = {
+
   beginDrag(props) {
+    /* istanbul ignore next */
     return {
       id: props.id,
     };
   },
+
   endDrag(props, monitor) {
+    /* istanbul ignore next */
     if (!monitor.getDropResult()) {
       return;
     }
+    /* istanbul ignore next */
     const { boardId } = monitor.getDropResult();
-    const { id, changeBoard } = props;
 
-    changeBoard(id, boardId);
+    /* istanbul ignore next */
+    props.changeBoard(props.id, boardId);
   },
 };
 
