@@ -15617,6 +15617,13 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var BoardForm = function (_React$Component) {
   _inherits(BoardForm, _React$Component);
 
+  _createClass(BoardForm, null, [{
+    key: 'focusElement',
+    value: function focusElement(el) {
+      el.focus();
+    }
+  }]);
+
   function BoardForm(props) {
     _classCallCheck(this, BoardForm);
 
@@ -15637,14 +15644,14 @@ var BoardForm = function (_React$Component) {
     key: 'componentDidMount',
     value: function componentDidMount() {
       if (this.inputName) {
-        this.inputName.focus();
+        this.constructor.focusElement(this.inputName);
       }
     }
   }, {
     key: 'componentDidUpdate',
     value: function componentDidUpdate() {
       if (this.inputName) {
-        this.inputName.focus();
+        this.constructor.focusElement(this.inputName);
       }
     }
   }, {
@@ -15932,12 +15939,14 @@ var _BoardsList2 = _interopRequireDefault(_BoardsList);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+/* istanbul ignore next */
 var mapStateToProps = function mapStateToProps(state) {
   return {
     boards: state.boards
   };
 };
 
+/* istanbul ignore next */
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     onBtnAddBoardClick: function onBtnAddBoardClick() {
@@ -16057,23 +16066,25 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 var cardSource = {
   beginDrag: function beginDrag(props) {
+    /* istanbul ignore next */
     return {
       id: props.id
     };
   },
   endDrag: function endDrag(props, monitor) {
+    /* istanbul ignore next */
     if (!monitor.getDropResult()) {
       return;
     }
+    /* istanbul ignore next */
 
     var _monitor$getDropResul = monitor.getDropResult(),
         boardId = _monitor$getDropResul.boardId;
 
-    var id = props.id,
-        changeBoard = props.changeBoard;
+    /* istanbul ignore next */
 
 
-    changeBoard(id, boardId);
+    props.changeBoard(props.id, boardId);
   }
 };
 
@@ -16396,6 +16407,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.filterCards = undefined;
 
 var _uid = __webpack_require__(28);
 
@@ -16411,12 +16423,13 @@ var _CardsList2 = _interopRequireDefault(_CardsList);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var filterCards = function filterCards(cards, boardId) {
+var filterCards = exports.filterCards = function filterCards(cards, boardId) {
   return cards.filter(function (card) {
     return card.boardId === boardId;
   });
 };
 
+/* istanbul ignore next */
 var mapStateToProps = function mapStateToProps(_ref, _ref2) {
   var cards = _ref.cards;
   var boardId = _ref2.boardId;
@@ -16426,6 +16439,7 @@ var mapStateToProps = function mapStateToProps(_ref, _ref2) {
   };
 };
 
+/* istanbul ignore next */
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     onBtnAddCardClick: function onBtnAddCardClick(boardId) {
