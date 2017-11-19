@@ -72,3 +72,46 @@ test('Should component doesn\'t call onFieldNameKeyup on input keypress', () => 
   wrapper.find('input').simulate('keyup', { keyCode: 40 });
   expect(onFieldNameBlur).not.toHaveBeenCalled();
 });
+
+test('Should component call onFieldNameBlur on input blur', () => {
+  const onFieldNameBlur = jest.fn();
+  const id = uid();
+  const name = 'Testing';
+  
+  const wrapper = mount(<BoardForm
+    editMode={true}
+    id={id}
+    name={name}
+    onFieldNameBlur={onFieldNameBlur}
+  />);
+
+  wrapper.find('input').simulate('blur');
+  expect(onFieldNameBlur).toHaveBeenCalled();
+  expect(onFieldNameBlur.mock.calls[0][0]).toEqual({ id, name });
+});
+
+
+test('Should component render value on input change', () => {
+  const id = uid();
+  
+  const wrapper = shallow(<BoardForm
+    editMode={true}
+    id={id}
+    name="Testing"
+  />);
+
+  expect(wrapper).toMatchSnapshot();
+  
+  wrapper.find('input').simulate('change', { target: { value: 'updated value' }});
+  
+  expect(wrapper).toMatchSnapshot();
+});
+
+
+test('Should input is focused after componentDidMount', () => {
+  const id = uid();
+  const mockFn = { focus: jest.fn() };
+
+  BoardForm.focusElement(mockFn);
+  expect(mockFn.focus).toHaveBeenCalled();
+});
