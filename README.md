@@ -1,7 +1,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/jmlavoier/task-tool/badge.svg)](https://coveralls.io/github/jmlavoier/task-tool)
-[!node version](https://img.shields.io/badge/node-8.8.1-green.svg)
-[!npm version](https://img.shields.io/badge/npm-5.4.2-brightgreen.svg)
-[!yarn version](https://img.shields.io/badge/yarn-1.3.2-yellowgreen.svg)
+[!node version(https://img.shields.io/badge/node-8.8.1-green.svg)]
+[!npm version(https://img.shields.io/badge/npm-5.4.2-brightgreen.svg)]
+[!yarn version(https://img.shields.io/badge/yarn-1.3.2-yellowgreen.svg)]
 
 ![TaskTool](http://i.imgur.com/nt7WsKC.png)
 
