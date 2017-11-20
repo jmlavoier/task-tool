@@ -74,3 +74,6 @@ I encourage you to use the `yarn` to install the packages, you'll enjoy the yarn
 ```
   yarn watch
 ```
+
+## Credits
+Created by [jmlavoier](https://github.com/jmlavoier)
