@@ -2,6 +2,7 @@
 [![node version](https://img.shields.io/badge/node-8.8.1-green.svg)]()
 [![npm version](https://img.shields.io/badge/npm-5.4.2-brightgreen.svg)]()
 [![yarn version](https://img.shields.io/badge/yarn-1.3.2-yellowgreen.svg)]()
+[![Build Status](https://travis-ci.org/jmlavoier/task-tool.svg?branch=master)](https://travis-ci.org/jmlavoier/task-tool)
 
 ![TaskTool](http://i.imgur.com/nt7WsKC.png)
 
