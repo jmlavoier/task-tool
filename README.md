@@ -2,20 +2,54 @@
 
 ![TaskTool](http://i.imgur.com/nt7WsKC.png)
 
-The **TaskTool** is more than a *To-do List*, It's a manager built thinking in performance, processing costs and scalability.
+The **TaskTool** is more than a *To-do List*, It was inpired on [Trello](trello.com). 
 *This project has been building in order to practice my knowledge in some technologies.*
+
+## [Demo](https://jmlavoier.github.io/task-tool/)
 
 ## Technologies
 
 - **JavaScript** - *ES6+ (Babel)*; 
 - **UI Components** - *React*; 
 - **State management** - *Redux, React Redux, Redux Persist*;
-- **Usability** - *React DnD*;
+- **UX/Usability** - *React DnD*;
 - **Style** - *Sass*;
 - **Modules** - *Webpack, CSS Modules*;
 - **Unit tests**: *Jest, Enzyme*;
 - **Clean code** - *Lint*;
-- **Continuous Integration** - *Coveralls*;
+- **Continuous Integration** - *Travis, Coveralls*;
 
 ## Layout
 ![Project](http://i.imgur.com/luVT6BZ.png)
+
+## Getting started
+
+### Install
+  yarn
+
+### Start app
+  yarn start
+
+### Running tests
+  yarn test
+
+### Watching the tests
+  yarn test:watch
+
+### Running coverage
+  yarn test:cov
+
+### Start Coverage Server
+  yarn server:cov
+
+### Running ESLint
+  yarn lint
+
+### Troubleshoot Lint issues
+  yarn lint:fix
+
+###  Production build
+  yarn build
+
+### Production build watch
+  yarn watch
