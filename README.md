@@ -2,7 +2,7 @@
 
 ![TaskTool](http://i.imgur.com/nt7WsKC.png)
 
-The **TaskTool** is more than a *To-do List*, It was inpired on [Trello](trello.com). 
+The **TaskTool** is more than a *To-do List*, It was inpired on [Trello](http://trello.com). 
 *This project has been building in order to practice my knowledge in some technologies.*
 
 You can see a demo [here](https://jmlavoier.github.io/task-tool/)
