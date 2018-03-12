@@ -29,54 +29,36 @@ You can see a demo [here](https://jmlavoier.github.io/task-tool/)
 ## Getting started
 I encourage you to use the `yarn` to install the packages, you'll enjoy the yarn.lock to a faster installation, and the scripts will be fast too.
 
+```
 ### Install
-```
-  yarn
-```
+yarn
 
 ### Start app
-```
-  yarn start
-```
+yarn start
 
 ### Running tests
-```
-  yarn test
-```
+yarn test
 
 ### Watching the tests
-```
-  yarn test:watch
-```
+yarn test:watch
 
 ### Running coverage
-```
-  yarn test:cov
-```
+yarn test:cov
 
 ### Start Coverage Server
-```
-  yarn server:cov
-```
+yarn server:cov
 
 ### Running ESLint
-```
-  yarn lint
-```
+yarn lint
 
 ### Troubleshoot Lint issues
-```
-  yarn lint:fix
-```
+yarn lint:fix
 
 ###  Production build
-```
-  yarn build
-```
+yarn build
 
 ### Production build watch
-```
-  yarn watch
+yarn watch
 ```
 
 ## Credits
