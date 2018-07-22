@@ -35,12 +35,12 @@ class CardForm extends React.Component {
   }
 
   onDescriptionKeyDown(event) {
-    if (event.keyCode === 13) {
-      this.props.onSaveCard({
-        id: this.props.id,
-        description: this.state.description,
-      });
-    }
+    // if (event.keyCode === 13) {
+    //   this.props.onSaveCard({
+    //     id: this.props.id,
+    //     description: this.state.description,
+    //   });
+    // }
   }
 
   onDescriptionBlur() {
